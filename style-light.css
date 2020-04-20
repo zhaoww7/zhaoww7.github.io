@@ -1,0 +1,26 @@
+/*
+ * The default (light) style.
+ */
+
+body {
+	color: #440077;
+	background-color: white;
+}
+.inverted {
+	color: white;
+	background-color: #440077;
+}
+
+a {
+	color: #440077;
+}
+a:visited {
+	color: #51188E;
+}
+a:active {
+	color: #FF0000;
+}
+
+.inverted a {
+	color: white;
+}

@@ -1,0 +1,26 @@
+/*
+ * The dark style when user prefers that in their browser/OS.
+ */
+
+body {
+	color: #cc88ff;
+	background-color: #111;
+}
+.inverted {
+	color: white;
+	background-color: #9200ff;
+}
+
+a {
+	color: #cc88ff;
+}
+a:visited {
+	color: #bb77ff;
+}
+a:active {
+	color: #FF0000;
+}
+
+.inverted a {
+	color: white;
+}
