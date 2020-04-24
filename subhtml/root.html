@@ -1,11 +1,117 @@
-<!--DOCTYPE html-->
+<!DOCTYPE html>
 <html>
 <head>
-<title>我们是谁 </title>
+    <meta charset='utf-8'>
+    <title>ROOT</title>
+    <link rel="icon" href="../logo/rootlogo.jpg">
 </head>
 
 </body>
-<p>我就是root</p>
+    <h1>一、ROOT简介</h1>
+        <p>ROOT是欧洲核子中心开发的，用于高能物理数据分析的开源软件。ROOT拥有独特的数据存储格式，可以迅速处理海量数据，并将其可视化。</p>
+        <p>简单地理解，ROOT可以被认为是C++的解释器，关于数据的处理指令可以通过类似C++的语法写入脚本，ROOT根据脚本处理数据、绘制图形。</p>
+        <p>20世纪90年代中期，欧洲核子中心（CERN）升级之后的对撞机产生的数据量激增，急需能胜任的数据处理软件；另一方面，CERN的一些软件开发人员已经有丰富的面向对象的软件开发经验。在这种背景下，ROOT应运而生。</p>
+        <p>目前，ROOT正被全世界所有主要的高能物理和核物理实验室用于监测、存储和分析数据。在其他科学、医疗和金融行业，许多人也都在使用ROOT。</p>
+        <p>不管怎样，ROOT都值得你去尝试！</p>
+    
+    <h1>二、ROOT安装</h1>
+        <p>如果你只需要学习ROOT，那么ROOT的安装过程算是比较简单的了，不信你可以看看genie、Geant4和NuWro吧。</p>
+    <h2>1.安装ROOT依赖</h2>
+        <p>目前（2020-4-22）ROOT官网提供的依赖软件包仍然是基于Ubuntu16和CentOS 7，但是目前Ubuntu18.04都发布两年了，20.04也即将发布稳定版，CentOS也发布了8版本。
+        <p>很多软件包名字有所更改，本文的软件包基于Ubuntu18.04，如果有些包有问题，建议根据出错提示修改</p>
+        <ul>
+        <li>必须的软件包:</li>
+        <li>git</li>
+        <li>dpkg-dev</li>
+        <li>cmake</li>
+        <li>g++、gcc、binutils</li>
+        <li>libx11-dev、libxpm-dev、libxft-dev、libxext-dev、libpng-dev、libjpeg-dev</li>
+        <li>python</li>
+        <br>
+        <li>建议选择的软件包:</li>        
+        <li>gfortran</li>
+        <li>libssl-dev、libpcre3-dev、libglew1.5-dev、libftgl-dev、libmysqlclient-dev、libfftw3-dev、libcfitsio-dev</li>
+        <li>libavahi-compat-libdnssd-dev、libldap2-dev、libxml2-dev、libkrb5-dev、ibgsl-dev、</li>
+        <li>xlibmesa-glu-dev</li>
+        <li>graphviz-dev</li>
+        <li>python-dev、python-numpy-dev</li>
+        <li>r-base</li>
+        <li>libqt4-dev：不建议安装，防止和Qt5冲突</li>
+        </ul>
+
+        <p>为了便于复制粘贴，下面给出整行的包名称：</p>
+        <p>sudo apt install git dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev libpng-dev libjpeg-dev python</p>
+        <p>sudo apt install gfortran libssl-dev libpcre3-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev libavahi-compat-libdnssd-dev libldap2-dev libxml2-dev libkrb5-dev ibgsl-dev xlibmesa-glu-dev  graphviz-dev python-dev python-numpy-dev  r-base </p>
+
+    <h2>2.编译安装ROOT</h2>
+        <h3>(1)首先说明目录结构：</h3>
+        <p>Linux的/opt是提供给用户安装本地软件的目录，我们假设配置、编译、安装在此位置</p> <br>
+        <img src="../ROOT目录结构.png" title="ROOT目录结构" alt=" " width="20% " heigth=" " />
+        <p> 此处root_v6.20.04.source.tar.gz是ROOT的源代码压缩包， root-6.20.04-src是ROOT解压后的源代码， root-6.20.04是想要安装ROOT的目录。</p>
+
+        <h3>(2)配置ROOT</h3>
+        <p>首先解压源代码，默认解压后的源代码名字为 root-6.20.04，手动改成上面所示的目录结构：</p>
+        <p>&emsp;tar -xvf root_v6.20.04.source.tar.gz</p> 
+        <p>&emsp;mv root_v6.20.04  root-6.20.04-src</p> 
+        <p>&emsp;mkdir  root-6.20.04</p> 
+        <p>进入 root-6.20.04：</p>
+        <p>&emsp;cd  root-6.20.04</p>
+        <p>cmake配置ROOT：</p>
+        <p>&emsp;cmake ../root-6.20.04-src &emsp; -DCMAKE_INSTALL_PREFIX=/opt/root-6.20.04 
+        <p>上述命令中&nbsp;-DCMAKE_INSTALL_PREFIX=/opt/root-6.20.04&nbsp;表示ROOT安装到&nbsp;/opt/root-6.20.04&nbsp;里</p>
+        <p>更一般的，如果不指定安装目录，不需要其他配置，直接：</p>
+        <p>&emsp; cmake ../root-6.20.04-src&emsp;</p>
+        <p>就可以</p> 
+
+        <h3>(3)编译ROOT</h3>
+        <p>执行完cmake就可以直接：</p>
+        <p>&emsp;cmake --build . -- j4</p>
+        <p>或者简单一点：</p>
+        <p>&emsp;make -j4</p>
+        <p>这里-j4 表示用4个核同时编译，具体选取几个核取决于你的电脑</p>
+        <p>编译时间会相当漫长、CPU长期满载，只有不出现error，你就可以慢慢等，准备一部你喜爱的电影看吧！</p>
+
+
+        <h3>(4)安装ROOT</h3>
+        <p>漫长的make之后，你就可以安装了，安装就是把编译好的文件--复制--到预先设定的安装目录：</p>
+        <p>&emsp;make install</p>
+        <p>这一步一般很快，而且基本不会有error出现。</p>
+        <p>至此，ROOT编译安装完全结束！</p> 
+        <br>        
+
+    <h2>附录：二进制安装ROOT</h2>
+    <p>很多初学者，特别是刚刚接触Linux的同学，看到上面编译就很晕菜。但是做物理的人，不必拘泥于软件安装过程，能正常运行，满足学习需求就足够了，学有余力而又学编译。</p>
+    <p>怀着这一想法，这里提供一种更简单的安装方法：</p>
+    <h3>下载二进制包</h3>
+    <p>到cern root官网下载编译好的二进制包，<a href="https://root.cern.ch/content/release-62004" target="_blank">这是6.20.04的下载页。<a></p>
+    <p>你可以轻易看到“Binary distributions”字样，这就是预先编译好的二进制包，根据你的操作系统把它下载下来。</p>
+
+    <h3>解压</h3>
+    <p>假设我们下载到了&nbsp;/opt&nbsp;文件夹</p>
+    &emsp;tar -xvf root_v6.20.04.Linux-ubuntu18-x86_64-gcc7.5.tar.gz
+    <p>得到：root-6.20.04文件夹</p>
+
+    <h3>设置环境</h3>
+    <p>&emsp;source /opt/root-6.20.04/bin/thisroot.sh</p> 
+    <p>这里source什么路径下的&nbsp;bin/thisroot.sh&nbsp;文件，取决于你的root解压后的文件夹名称、解压到哪里。</p>
+
+
+    <h1>三、ROOT使用</h1>
+    <p>ROOT的使用是个远比安装庞杂的事情，等我有时间再补充。同时非常欢迎志同道合的同学一起完善这一部分。</p>
+    <p>感兴趣的请到<a href="https://github.com/zhaoww7/zhaoww7.github.io" target="blank">我的github项目主页</a> 一起commit</p>
+    <br>
+    <br>
+
+    <h1>四、ROOT参考网站</h1>
+    <ul>
+    <li>ROOT-6.20.04下载地址：<a href="https://root.cern.ch/content/release-62004" target="blank">https://root.cern.ch/content/release-62004</a> </li>
+    <li>ROOT依赖包列表：<a href="https://root.cern.ch/build-prerequisites" target="blank">https://root.cern.ch/build-prerequisites</a> </li>
+    <li>ROOT的cmake配置选项：<a href="https://root.cern.ch/building-root" target="blank">https://root.cern.ch/building-root</a> </li>
+    <li>ROOT使用手册：<a href="https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html" target="blank">https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html</a> </li>
+    </ul>
+
+    <h1>五、联系我们</h1>
+    <p>邮箱：zhaoww2013@126.com ; zhaoww1998@outlook.com</p>
 
 
 </body>

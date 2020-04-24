@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>NuWro</title>
+    <link rel="icon" href="../logo/NuWro-logo.png">
+</head>
+
+<body>
+    <h1>一、NuWro简介</h1>
+    <p>NuWro是一个基于蒙特卡洛模拟方法产生中微子的产生器，它能产生中微子散射过程的所有基本动力学。NuWro发生器具有描述探测器的几何模块，可以处理逼真的中微子光束。总之，NuWro是中微子实验得重要的工具。</p>
+
+    <h1>二、NuWro安装</h1>
+    <h2>1.安装依赖包</h2>
+    <p>NuWro依赖的软件包较少，只有下面两个：</p>
+    <ul>
+    <li>pythia6</li>
+    <li>ROOT</li>
+    </ul>
+    <p>值得注意的是，ROOT配置编译的时候需要链接pythia6库文件。</p>
+    <p>下面以安装到&emsp;/opt&emsp;目录说明过程</p>
+
+    <h3>(1)pythia6安装</h3>
+    <p>pythia6是个相当古老的软件包，它使用Fortran77编写，在2007年已经被用C++重写的pythia8代替，但是没有办法，NuWro要求pythia6</p>
+    <p>这里提供一个简单安装pythia6的方法：</p>
+    <p>&emsp;下载：<a href="../download/pythia6.zip">点击这里</a></p>
+    <p>编译：</p>
+    <p>&emsp;Linux:&ensp;./makePythia6.linux(按照命名来说，64位Linux应该是./makePythia6.linuxx8664，但是我用前者也可以)</p>
+    <p>&emsp;macos:&ensp;./makePythia6.macosx(按照命名来说，64位macos应该是./makePythia6.macosx64，但是我两个都没试)</p>
+    <p>编译之后生成：&ensp;libPythia6.so&ensp;即为需要的pythia6库文件。</p>   
+
+    <h3>(2)ROOT链接pythia6安装</h3>
+     <p>下载安装包：</p>
+    <p>&emsp;wget  https://root.cern/download/root_v6.20.04.source.tar.gz  </p>
+    <p>解压：</p>
+    <p>&emsp;tar  –xvf root_v6.20.04.source.tar.gz  </p>
+    <p>规范命名：</p>
+    <p>&emsp;mv root_v6.20.04  root-6.20.04-src</p> 
+    <p>&emsp;mkdir  root-6.20.04</p> 
+    <p>&emsp;cd ../ root-6.20.04</p>
+
+    <p>编译安装：</p>
+    <pre>
+    cmake   ../ root-6.20.04-src
+    -DCMAKE_INSTALL_PREFIX=/opt/root-6.20.04
+    -Dpythia6=ON 
+    -DPYTHIA6_LIBRARY=/opt/pythia6/libPythia6.so 
+    </pre>   
+
+    <p><b>特别注意！一定要把libPythia6.so复制粘贴到root-6.20.04的lib目录下，不然无法编译NuWro!!</b></p> 
+  
+    <p>&emsp;cp /opt/pythia6/libPythia6.so  /opt/root-6.20.04/lib </p>
+ 
+
+    <h2>2.编译安装NuWro</h2>
+
+    <p>首先设置ROOT环境变量：</p> 
+    <p>&emsp;source /opt/root-6.20.04/bin/thisroot.sh</p>
+    <p>其次下载NuWro安装包： </p>
+    <p>&emsp;git clone https://github.com/NuWro/nuwro.git</p>
+    <p>如果下载速度太慢，可以将其导入gitee，然后从gitee下载。</p>
+    <p>最后，NuWro无需configure，只需make即可编译安装：</p>
+    <p>&emsp;make </p>
+    
+    <h2>3.设置NuWro环境变量</h2>
+    <p>需要同时设置ROOT和NuWro二者的环境变量</p>
+    <p>&emsp;source  /opt/root-6.20.04/bin/thisroot.sh </p>   
+    <p>&emsp;export /opt/nuwro/bin:$PATH </p>
+    
+    <h2>4.NuWro验证</h2>
+    <p>首先，把/opt/nuwro/data/params.txt 拷贝到自己目录下</p>
+    <p>&emsp;cp nuwro/data/params.txt /home</p>
+    <p>其次，设置环境</p>
+    <p>然后，输入nuwro</p>
+    <p>&emsp;nuwro</p>
+    <p>最后，用ROOT打开nuwro分析后的root文件</p>
+    <p>&emsp;myroot eventsout.root</p>
+
+
+    <h1>三、NuWro使用</h1>
+        <h2>留白也是艺术</h2>
+        <h2>有请马雨阳同学来谈谈</h2>
+
+
+
+    <h1>四、NuWro参考网站</h1>
+    <ul>
+        <li>官方主页：<a href="https://nuwro.github.io/user-guide/" target="blank">https://nuwro.github.io/user-guide/</a></li>
+        <li>官方安装教程：<a href="https://nuwro.github.io/user-guide/getting-started/installation/">https://nuwro.github.io/user-guide/getting-started/installation/</a></li>
+        <li>本人翻译的官方安装教程：<a href="https://blog.csdn.net/weixin_43897108/article/details/105673586">https://blog.csdn.net/weixin_43897108/article/details/105673586</a> </li>
+    </ul>
+
+
+    <h1>五、联系我们</h1>
+    <p>赵问问：</p>
+    <p>邮箱：zhaoww2013@126.com ; zhaoww1998@outlook.com</p>
+    <p>马雨阳:</p>
+    <p>邮箱：</p>
+
+
+
+
+    <h1>NuWro!</h1>    
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

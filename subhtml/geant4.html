@@ -1,11 +1,177 @@
-<!--DOCTYPE html-->
+<!DOCTYPE html>
 <html>
 <head>
-<title>我们是谁 </title>
+    <meta charset='utf-8'>
+    <title>Geant4</title>
+    <link rel="icon" href="../logo/geant4logo-1.jpg">
 </head>
 
 </body>
-<p>我就是geant4</p>
+    <h1>一、Geant4简介</h1>
+    <p>Geant4（GEometry ANd Tracking，几何与追踪）是欧洲核子中心(CERN)基于C++语言、使用蒙特卡洛模拟技术开发的模拟粒子在物质中的运输物理过程的软件包。Geant4是开放源代码的自由软件，遵循Geant4软件协议。</p>
+    <p>欧洲核子中心与日本高能加速器研究机构（KEK）在1993年曾经研究过如何在Geant3中使用现代的计算机技术，后来CERN组织了来自欧洲、俄罗斯、加拿大、日本和美国的几十个实验室、高校和科研院所的超过100名科学家和工程师合作，基于面向对象的C++，对已有的模拟程序进行重新构造。这项工程于1998年12月初步完成，随后在1999年2月发布了Geant4。</p>
+    <p>Geant4创建的目的是利用现代计算机技术模拟粒子运输过程，现在Geant4不仅被广泛用于粒子物理与核物理的研究，也应用于空间科学、微电子学和辐射医学等方面。</p>
+    <p>无论是中微子模拟还是BESIII合作组，Geant4都值得一学。</p>
+
+
+    <h1>二、Geant4安装</h1>
+    <h2>1.安装依赖包</h2>
+    <p>我在Geant4官网并未找到需要安装哪些依赖包，一下依赖包是网上教程推荐安装的。为防止报错，可以一次全部安装。</p>
+
+    <ul>
+        <li>git、dpkg-dev、g++、gcc、binutils、gfortran 、cmake（确定是3.3版本以上）、python、python-dev：装机必备</li>
+        <li>libx11-dev、libxpm-dev、libxft-dev、libxext-dev、libxmu-dev、libpng-dev、libjpeg-dev：图形界面 X 服务必备</li>
+        <li>libssl-dev、libpcre3-dev、libglew-dev、libftgl-dev、libmysqlclient-dev、libfftw3-dev、libcfitsio-dev</li>
+        <li>libavahi-compat-libdnssd-dev、libldap2-dev、graphviz-dev、libxml2-dev、libkrb5-dev、libgsl-dev、libxerces-c-dev、libmotif-dev、libglw1-mesa-dev、opticalraytracer</li>
+    </ul>
+
+    <p>以上是apt可以直接安装的包，有些可能本机已经自带、有些安装其他软件的时候被自动安装，不管怎样，apt全部安装应该没错。</p>
+    <p>给一个整行的便于复制粘贴：</p>
+    <p>sudo apt install git
+dpkg-dev
+cmake
+g++
+gcc
+binutils
+libx11-dev
+libxpm-dev
+libxft-dev
+libxext-dev
+libxmu-dev
+libpng-dev
+libjpeg-dev
+python
+gfortran
+libssl-dev
+libpcre3-dev
+libglew-dev
+libftgl-dev
+libmysqlclient-dev
+libfftw3-dev
+libcfitsio-dev
+graphviz-dev
+libavahi-compat-libdnssd-dev
+libldap2-dev
+python-dev
+libxml2-dev
+libkrb5-dev
+libgsl-dev
+libxerces-c-dev
+libmotif-dev
+libglw1-mesa-dev
+opticalraytracer
+    </p>
+
+    <p>但是！最重要的是下面几项依赖，一定要安装：</p>
+    <ul>
+    <li>Qt5：C++图形开发框架</li>
+    <li>openGL：图形渲染函数库</li>
+    <li>Xerces-c：提供XML文件数据解析</li>
+    </ul>
+    <h3>(1)Qt5的安装</h3>
+    <p>下载：镜像网站下载Qt安装包，例如：qt-opensource-linux-x64-5.14.2.run。不推荐在官网上下载，一是太慢，二是手续繁琐<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qt/5.14/5.14.2/" target="blank">清华镜像下载</a></p> 
+    <p>添加执行权限：&emsp;sudo chmod +x qt-opensource-linux-x64-5.14.2.run</p>
+    <p>运行：&emsp;./qt-opensource-linux-x64-5.14.2.run </p>
+    <p>图形化安装：可以全部勾选，安装过程很漫长</p>
+    <p>安装OpenGL：&emsp;sudo apt install libgl1-mesa-dev</p>
+    <p>设置Qt环境：</p>
+    <p>&emsp;&emsp;export PATH=/opt/Qt5.14.2/5.14.2/gcc_64/bin:/home/zhaoww/Qt5.14.2/Tools/QtCreator/bin:$PATH</p>
+    <p>export LD_LIBRARY_PATH=/opt/Qt5.14.2/5.14.2/gcc_64/lib:$LD_LIBRARY_PATH</p>
+    <p>运行示例：感兴趣的可以运行个Qt示例，网上教程很多但都有问题，建议运行自带例子，说不定你就爱上了开发图形界面！</p>
+
+    <h3>(2)Xerces-c安装</h3>
+    <p>既然依赖包安装了libxerces-c-dev，为什么此处还需要安装Xerces-c？存疑</p>
+    <p>下载安装包：&emsp;wget https://mirrors.tuna.tsinghua.edu.cn/apache/xerces/c/3/sources/xerces-c-3.2.3.tar.gz</p> 
+    <p>配置编译安装：&emsp;./configure && make && sudo make install</p>
+    <p>注意此处&emsp;sudo apt install &emsp;安装到&emsp;/usr/local</p>
+
+        <h2>2.编译安装Geant4</h2>
+        <p>目前Geant4最新版本是10.06.p01，此处以它为例说明，安装目录仍然/opt。</p>
+        <h3>(1)下载Geant4安装包</h3>
+        <p>&emsp;wget http://geant4-data.web.cern.ch/geant4-data/releases/geant4.10.06.p01.tar.gz</p>
+        <p>解压：</p>
+        <p>&emsp;tar  –xvf  geant4.10.06.p01.tar.gz  </p>
+        <p>规范命名：</p>
+        <p>&emsp;mv geant4.10.06.p01 geant4.10.06.p01-src (有-src表示源代码目录)</p>
+        <p>&emsp;mkdir geant4-10.6.1                                    (无-src表示安装目录)</p>
+        
+        <h3>(2)下载Geant4数据包</h3>
+        <p>Geant4版本与数据版本是相互对应的，所以安装什么版本的Geant4使用什么版本的数据包，最好不要混用。</p>
+        <p>Geant4.10.06.p01对应的数据包有12个，<a href="https://geant4.web.cern.ch/support/download">下载页面在此（非常慢，办法自想）</a> </p> 
+        <p>下载之后:将这12个数据文件解压后放到/opt/geant4-10.6.1/share/Geant4-10.6.1/data文件夹</p>
+        <p>注意，这个路径是不存在的，需要自己创建之后再放入数据文件！</p>
+
+        <h3>(3)配置Geant4</h3>
+        <p>配置非常简单，下面给出一个参考：</p>
+        <pre>
+        cmake ../geant4.10.06.p01-src   
+            -DCMAKE_INSTALL_PREFIX=/opt/geant4.10.6.1  
+            -DGEANT4_USE_GDML=ON  
+            -DGEANT4_USE_QT=ON  
+            -DGEANT4_USE_OPENGL_X11=ON  
+            -DGEANT4_USE_RAYTRACER_X11=ON  
+            -DGEANT4_BUILD_MULTITHREADED=ON  
+            -DGEANT4_USE_XM=ON  
+            -DGEANT4_USE_X11=ON  
+            -DGEANT4_USE_SYSTEM_ZLIB=ON
+        </pre>
+
+        <h3>(4)编译Geant4</h3>
+        <p> 如果配置通过，那么下面就简单了：</p>
+        <p>&emsp;make</p>
+        <p>即可</p>
+
+        <h3>(5)安装Geant4</h3>
+        <p>如果make也结束了，那么你的一只脚已经迈入成功的大门了，只需：</p>
+        <p>&emsp;make install</p>
+
+        <h3>(6)运行示例程序</h3>
+        <p>首先配置环境：（我发现是否配置环境并没什么影响，存疑）</p>
+        <p>&emsp;source /opt/geant4.10.6.1/bin/geant4.sh</p>
+        <p>&emsp;source /opt/geant4.10.6.1/share/Geant4-10.6.1/geant4make/geant4make.sh</p>
+
+        <p>其次运行示例：</p>
+        <p>&emsp;cd /opt/geant4.10.6.1/share/Geant4-10.6.1/examples/basic/B1</p>
+        <p>&emsp;mkdir build && cd build</p>      
+        <p>&emsp;cmake .. </p>
+        <p>&emsp;make </p>
+        <p>&emsp;./exampleB1 </p>
+        <p>同理也可以运行B2（B2a、B2b）等示例。</p>
+ 
+
+    <h1>三、Geant4使用</h1>
+        <h2>留白也是艺术</h2>
+        <h2>有请做Geant4项目的同学来谈谈</h2>
+
+
+
+
+    <h1>四、Geant4参考网址</h1>
+        <ul>
+            <li>Geant4官方主页：<a href="http://geant4.web.cern.ch/" target="blank">http://geant4.web.cern.ch/</a> </li>
+            <li>Geant4源代码与数据包下载<a href="https://geant4.web.cern.ch/support/download" target="blank">https://geant4.web.cern.ch/support/download</a></li>
+            <li>Geant4安装与使用手册：<a href="http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/InstallationGuide/html/index.html" target="blank">http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/InstallationGuide/html/index.html</a> </li>
+            <li>微信：Geant4在Ubuntu18.04的安装：<a href="" target="blank"></a> </li>
+        </ul>
+
+
+
+    <h1>五、联系我们</h1>
+    <p>赵问问：</p>
+    <p>邮箱：zhaoww2013@126.com ; zhaoww1998@outlook.com</p>
+    <p>廖健:</p>
+    <p>邮箱：</p>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
