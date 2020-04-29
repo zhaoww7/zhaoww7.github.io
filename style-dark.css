@@ -3,22 +3,22 @@
  */
 
 body {
-	color: #cc88ff;
+	color: #e9d0fc;
 	background-color: #111;
 }
 .inverted {
 	color: white;
-	background-color: #9200ff;
+	background-color: #51c4d3;
 }
 
 a {
-	color: #cc88ff;
+	color: #51c4d3;
 }
 a:visited {
-	color: #bb77ff;
+	color: #51c4d3;
 }
 a:active {
-	color: #FF0000;
+	color: #51c4d3;
 }
 
 .inverted a {
