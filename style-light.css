@@ -1,19 +1,14 @@
-/*
- * The default (light) style.
- */
 
  body {
-	color: #440077;
+	color: #f8df70;
 	} 
 
+
+/***************** 链接不加下划线 ***************/
 a{text-decoration : none} 
 
-.inverted {
-	color: white;
-	background-color: rgb(120,168,192);
-}
 
-
+/*********** 最顶部的中山大学唐健团队的标志图片 ***********/
 #top-pic{
 	background-color:rgb(65,105,139);
 	display:block;
@@ -23,16 +18,17 @@ a{text-decoration : none}
 
 }
 
+/*********** 中上主题图片，成果拼图 ***********/
 #mid-pic-div{
 	text-align: center;
 }
 
 #mid-pic{
-	width: 80%;   /* 比例10:1 */
+	width: 80%;          /* 比例10:1 */
 	height: 8%;
 }
 
-
+/*********** 滑动效果的导航栏 ***********/
 .menu{
 	display:flex ;
 	list-style: none;
@@ -100,11 +96,13 @@ a{text-decoration : none}
 	left:85.5%;
 }
 
+/*********** 快速链接的分割栏 ***********/
 .cut{
 	margin-top: 5em;
 	margin-bottom: 2em;
-	margin-left: 6%;
-	margin-right: 6%;
+	margin-left: 4%;
+	margin-right: 5%; 
+	
 	padding: 0;
 	border: 5px black double;
 	background-color: rgb(46,49,124);
@@ -113,7 +111,7 @@ a{text-decoration : none}
 	
 }
 
-
+/** 中文字体 **/
 #cut-zh{
 	margin-top: 3px;
 	margin-bottom: 1px;
@@ -124,6 +122,7 @@ a{text-decoration : none}
 	color:yellow
 }
 
+/** 英文字体 **/
 #cut-en{
 	margin-top: 1px;
 	margin-bottom: 3px;
@@ -135,8 +134,9 @@ a{text-decoration : none}
 	color:yellow;
 }
 
+/******************** 物理软件的八大板块  *******************/
 
-.testL{
+.testL{                       /*第一列的两个*/
 	float: left;
 	width: 15%;
 	height: 7em;
@@ -153,7 +153,7 @@ a{text-decoration : none}
 
 }
 
-.testC{
+.testC{                           /*第2、3列的共四个*/
 	float: left;
 	width: 15%;
 	height: 7em;
@@ -169,7 +169,7 @@ a{text-decoration : none}
 
 }
 
-.testR{
+.testR{							/* 第四列的两个 */
 	float: left;
 	width: 15%;
 	height: 7em;
@@ -186,7 +186,7 @@ a{text-decoration : none}
 
 }
 
-.testp{
+.testp{                       /*八大板块内部的文字*/
 	text-align: center;
 	margin-top: 0.7em;
 
@@ -197,6 +197,7 @@ a{text-decoration : none}
 }
 
 
+/************* 最下部的网页备注、版权、联系方式 ***************/
 
 .low{                           /*底部大盒子*/
 	
@@ -216,6 +217,7 @@ a{text-decoration : none}
 
 	margin-top: 1em;
 	margin-left: 1em;
+	margin-left: 5em;
 
  	position: absolute;
 }
@@ -236,7 +238,7 @@ a{text-decoration : none}
 
 
 
-/****************************************************/
+/**************************  星空背景图  **********************/
 html {
 	height: 100%;
 	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
