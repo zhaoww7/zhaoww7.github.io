@@ -97,8 +97,15 @@ opticalraytracer
         
         <h3>(2)下载Geant4数据包</h3>
         <p>Geant4版本与数据版本是相互对应的，所以安装什么版本的Geant4使用什么版本的数据包，最好不要混用。</p>
-        <p>Geant4.10.06.p01对应的数据包有12个，<a href="https://geant4.web.cern.ch/support/download">下载页面在此（非常慢，办法自想）</a> </p> 
+        <p>Geant4.10.06.p01对应的数据包有12个，<a href="https://geant4.web.cern.ch/support/download">下载页面在此（非常慢）</a> </p> 
         <p>下载之后:将这12个数据文件解压后放到/opt/geant4-10.6.1/share/Geant4-10.6.1/data文件夹</p>
+	<p>用下面的命令可以批量解压：</p>
+	<pre>
+	for i in `ls *.gz`
+	do 	
+		tar -zxvf $i 
+	done
+	</pre>
         <p>注意，这个路径是不存在的，需要自己创建之后再放入数据文件！</p>
 
         <h3>(3)配置Geant4</h3>
