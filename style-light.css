@@ -196,6 +196,30 @@ a{text-decoration : none}
 
 }
 
+/***************** 中下部旋转的Geant4-B1B2B3示例动图 ****************/
+/* 三张图片总大盒子 */
+#geant4-gif-div{
+	width: 90%;
+	height: 25em;
+
+	transform: translate(5%,95%);
+	position: absolute;
+	border:4px #440077 solid;
+	border-radius: 10px;
+
+
+}
+
+/** 三张图片的分别盒子 **/
+.geant4-gif-subdiv{
+	float: left;
+	margin: 2%;
+
+	transform: translateX(3%);
+	border:1px purple solid;
+} 
+
+
 
 /************* 最下部的网页备注、版权、联系方式 ***************/
 
