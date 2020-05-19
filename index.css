@@ -1,0 +1,217 @@
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+}
+a{
+    text-decoration : none;
+} 
+
+/*************** 最顶部logo **************/
+
+
+/*************** 菜单按钮 **************/
+
+
+/*************** picture、news、about三部分总框 **************/
+#page{
+    /* border: 2px solid red ; */
+    height: 900px;
+    width: 100%;
+}
+/*************** 左侧picture、about总框 **************/
+#left{
+    /* border: 2px solid red; */
+    height: 900px;
+    width: 60%;
+    float: left;
+}
+/*************** 左上picture框 **************/
+#picture{
+    float: left;
+    /* border:2px solid blue; */
+    height: 500px;
+    width: 100%;
+
+}
+/************ 百叶窗效果 *************/
+.main{               /*   外围的框框   */
+	width: 90%;
+	height: 390px;
+	margin: 50px 10px auto;
+    overflow: hidden;
+
+}
+
+li{
+	width: 120px;
+	float: left;
+	border-left: 1px solid white;
+	position: relative;
+	transition: all 1s ;
+}
+
+.flag{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60%;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.main:hover li{width:80px}
+.main li:hover{width:400px}
+
+/*************** 左下about框 **************/
+#about{
+    float: left;
+    /* border: 2px solid blue; */
+    height: 400px;
+    width: 100%;
+}
+
+#about-title{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 6px solid teal;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+#about-text{
+    margin-left: 50px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:auto ;
+    letter-spacing: 1.5px;          /* 漢字间距*/
+    text-indent: 2em;             /* 首行缩进 */
+    line-height: 20pt;
+    color: #666666;
+}
+
+/*************** 右侧news框 **************/
+#news{
+    float: left;
+    /* border: 2px solid blue; */
+    height: 900px;
+    width: 35%;
+    margin-left: 35px;
+}
+
+#news-title{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 6px solid teal;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+.news-items{
+    width: 90%;
+    list-style-type: none;
+    border-bottom: 1px solid skyblue;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;    /* 保证条目与标题左侧竖线对其 */
+
+}
+h6{
+    font-size: 12pt;
+    color: teal;
+    margin: 15px auto 5px;
+}
+#news-more{
+    width: 90%;
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-left: 10px;    /* 保证条目与标题左侧竖线对其 */
+    border-radius: 8px;
+    background-color: skyblue;
+    text-align: center;
+    font-size: 16pt;
+    color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+}
+
+/*************** 最底部框 **************/
+#bottom{
+    border-top : 2px solid #c0c0c0;
+    width: 96%;
+    margin-left: 2%;
+    height: 300px;
+    color: #666666;
+ 
+    
+}
+/**********友情链接  *********/
+#bottom-link{
+    float: left;
+    width: 45%;
+    height: 300px;
+
+}
+#bottom-link-title{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;    
+    border-bottom: 2px solid #666666;
+    width: 80%;
+    font-size: 18pt;
+
+}
+.bottom-link-li{
+    width: 100%;
+    margin-left: 30px;
+    font-size: 12pt;
+    list-style-type: none;
+    line-height: 24pt;
+    letter-spacing: 1.5px;
+    
+}
+
+.bottom-link-a:link{
+    color: #666666;
+}
+
+.bottom-link-a:visited {
+    color:#666666;
+    text-decoration:none;
+}
+    
+.bottom-link-a:hover {
+    color:#666666;
+    text-decoration:none;
+    }
+    
+.bottom-link-a:active {
+    color:#666666;
+    text-decoration:none;
+}
+
+
+ /********** 联系我们 *********/
+#bottom-contact{
+    float: left;
+    width: 45%;
+    height: 300px;
+}
+#bottom-copyright{
+    display: inline-block;
+    width: 100%;
+    text-align: center;    
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid teal;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}

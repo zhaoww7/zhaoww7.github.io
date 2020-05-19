@@ -1,0 +1,27 @@
+#root{
+    border-bottom: 2px solid skyblue;
+    width: 96%;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+#root-img{
+    float: left;
+    width: 20%;
+    height: 130px;
+    /* border: 2px solid yellow; */
+    
+}
+#root-text{
+    float: left;
+    width: 75%;
+    height: 130px;
+    /* border: 2px solid blue; */
+    margin: 0 0 0 20px;
+    text-indent: 2em;
+    line-height: 20pt;
+    letter-spacing: 1px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

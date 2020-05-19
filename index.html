@@ -1,139 +1,145 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <title>唐健天河二号物理软件组</title>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <link rel="icon" href="./logo/th2logo.jpg">
-   <link rel="stylesheet" href="./style-light.css" > 
-   <link rel="stylesheet" href="./mainbackground.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
+    <link rel="icon" href="./logo/S-logo.jpg">
+    <link rel="stylesheet" href="top+menu.css">
+    <link rel="stylesheet" href="index.css">
 
-
+    <title>首页</title>
 </head>
 
-<body >
-<!--星空背景-->
-<div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
+<body>
 
-<!--顶部图片-->
-<div class="top-pic">
-<img src="./picture/top-picture.png " alt="top-picture" id="top-pic">
+<!-----通用顶部模板复制 起点----->
+<!------------最顶部logo --------------->
+<div id="top">
+<p id="top-text">SMOOTH | SYSU MuOn and Optical TomograpHy</p>
 </div>
 
-<!--导航栏-->
-<!--导航栏-->
-<nav class="menu">
-   <a href="./index.html" class="menu-item">首页</a>
-   <a href="./subindex/group-people.html" class="menu-item">团队成员</a> 
-   <a href="./subindex/scientific-subject.html" class="menu-item">科研课题</a>
-   <a href="./subindex/result-show.html" class="menu-item">成果展示</a>
-   <a href="./subindex/computer-cluster.html" class="menu-item">计算集群</a>
-   <a href="./subindex/physics-software.html" class="menu-item">物理软件</a>
-   <a href="./subindex/contact.html" class="menu-item">联系我们</a>
-   <a href="#" class="bg"></a>
-</nav>
+<!------------菜单按钮 --------------->
+<div id="menu">
+    <table id="menu-items">
+	    <tr>
+	        <td><a href="index.html" class="menu-link">首页</a> </td>
+	        <td><a href="group-people/group-people.html" class="menu-link">团队成员</a> </td>
+            <td><a href="" class="menu-link">科研课题</a> </td>
+            <td><a href="" class="menu-link">成果展示</a> </td>
+            <td><a href="" class="menu-link">计算集群</a> </td>
+            <td><a href="software/software.html" class="menu-link">物理软件</a> </td>
+            <td><a href="contact/contact.html" class="menu-link">联系我们</a> </td>
+	    </tr>
+    </table>
+</div>
+<!-----通用顶部模板复制 终点----->
+
+<!------------picture、news、about三部分总框 --------------->
+<div id="page">
+    <div id="left">
+
+        <div id="picture">
+            <ul class="main">
+                <li>
+                    <img src="picture/turn-pic1.png" alt="">
+                    <div class="flag">Nonstandard interactions versus planet-scale neutrino oscillations</div>
+                </li>
+                <li>
+                    <img src="picture/turn-pic2.png" alt="">
+                    <div class="flag">波长位移计的研究</div>
+                </li>
+                <li>
+                    <img src="picture/turn-pic3.png" alt="">
+                    <div class="flag">Muon子探测器的模拟</div>
+                </li>
+                <li>
+                    <img src="picture/turn-pic4.png" alt="">
+                    <div class="flag">宇宙射线实验室</div>
+                </li>
+                <li>
+                    <img src="picture/turn-pic5.png" alt="">
+                    <div class="flag">未完待续</div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="about">
+            <h2 id="about-title">关于我们</h2>
+            <p id="about-text">《庄子 &bull; 天下篇》说到：“一尺之棰,日取其半,万世不竭。”对我们日常生活所见的宏观物体进行持续分割，
+            最终会得到什么呢？对这个问题问题的思考吸引着古代先贤和近代科学家。现代粒子物理标准模型认为，
+            物质是由三代夸克、三代轻子和一些传导相互作用的玻色子组成。然而微观世界相当精妙，即使现在，仍然有很多未知谜题，
+            诸如引力相互作用的统一、中微子是否有质量、暗物质与暗能量究竟是什么。
+            </p>
+            <p id="about-text">本课题组的研究方向包括加速器中微子物理、大气中微子物理、缪子探测器模拟仿真与研制、暗物质的寻找及其排除曲线、天河二号在高能物理的应用等。
+            本课题组拥有缪子科学与应用实验室（SYSU MuOn and Optical TomograpHy , 简称SMOOTH），以此为依托研究宇生缪子相关现象。
+            本课题组加入的国际合作组包括JUNO、BESIII和COMET等。
+            </p>
+        </div>
+    
+    
+    </div>
+
+    <div id="news">
+        <h2 id="news-title">最新动态</h2>
+        <ul >
+            <li class="news-items">
+                <h6>5月16日 2020年</h6>
+                <p>恭喜唐健老师指导的2016级本科生完成毕业论文答辩</p>
+            </li>
+            <li class="news-items">
+                <h6>5月10日 2020年</h6>
+                <p>唐健老师组会</p>
+            </li>
+            <li class="news-items">
+                <h6>5月3日 2020年</h6>
+                <p>唐健老师组会</p>
+            </li>
+            <li class="news-items">
+                <h6>2月25日 2020年</h6>
+                <p>恭喜杨航、许梓峰同学在 Nucl. Sci. Tech 上发表波长位移计的论文</p>
+            </li>
+            <li class="news-items">
+                <h6>1月9日 2020年</h6>
+                <p>恭喜唐健老师在Nucl. Phys. B上发表跷跷板模型的论文</p>
+            </li>
+            <li class="news-items">
+                <h6>12月19日 2019年</h6>
+                <p>恭喜奉玮杰同学在 Phys.Rew. D 上发表关于中微子振荡的论文</p>
+            </li>
+            <li id="news-more">
+            <p>MORE</p>
+            </li>
+        </ul>
+    </div>
 
 
-<!--百叶图-->
-<ul class="main">
-   <li>
-      <img src="picture/turn-pic1.png" alt="">
-      <div class="flag">Nonstandard interactions versus planet-scale neutrino oscillations</div>
-   </li>
-   <li>
-      <img src="picture/turn-pic2.png" alt="">
-      <div class="flag">波长位移计的研究</div>
-   </li>
-   <li>
-      <img src="picture/turn-pic3.png" alt="">
-      <div class="flag">Muon子探测器的模拟</div>
-   </li>
-   <li>
-      <img src="picture/turn-pic4.png" alt="">
-      <div class="flag">宇宙射线实验室</div>
-   </li>
-   <li>
-      <img src="picture/turn-pic5.png" alt="">
-      <div class="flag">未完待续</div>
-   </li>
-</ul>
-
-
-
-
-
-<!--主题图片下分割栏-->
-
-<div class="cut">
-<p ><span id="cut-zh"> 快速链接</span> <span id="cut-en">Quickly Get</span> </p>
 </div>
 
-<!--八大板块-->
-   <div class="testL">
-      <a href="./subhtml/whoamwe.html"><p class="testp">我们是谁</p></a>
-   </div>
+<div id="bottom">
+    <div id="bottom-link">
+        <p id="bottom-link-title">友情链接</p>
+        <ul> 
+            <li class="bottom-link-li"><a href="http://www.sysu.edu.cn/" class="bottom-link-a">中山大学</a></li>
+            <li class="bottom-link-li"><a href="http://spe.sysu.edu.cn/" class="bottom-link-a">中山大学物理学院</a></li>
+            <li class="bottom-link-li"><a href="http://www.nscc-gz.cn/" class="bottom-link-a">天河二号超级计算机</a></li>
+            <li class="bottom-link-li"><a href="http://www.ihep.cas.cn/" class="bottom-link-a">中国科学院高能物理研究所</a></li>
+            <li class="bottom-link-li"><a href="http://juno.ihep.cas.cn/" class="bottom-link-a">江门中微子国际合作组</a></li>
+            <li class="bottom-link-li"><a href="http://comet.kek.jp/Introduction.html" class="bottom-link-a">COMET国际合作组</a></li>
+        </ul>
+    </div>
 
-   <div class="testC">
-      <a href="./subhtml/singularity.html"><p class="testp">singularity</p></a>
-   </div>
+    <div id="bottom-contact">
+        <p id="bottom-link-title">联系我们</p>
+        <ul>
+            <li class="bottom-link-li">地址：广州市海珠区新港西路135号 </li>
+            <li class="bottom-link-li">邮编：510275</li>
+            <li class="bottom-link-li">反馈邮箱：zhaoww7@mail2.sysu.edu.cn</li>
+        </ul>
+    </div>
 
-   <div class="testC">
-     <a href="./subhtml/root.html"> <p class="testp">ROOT</p></a>
-   </div>
-
-   <div class="testR">
-      <a href="./subhtml/geant4.html"><p class="testp">Geant4</p></a>
-   </div>
-
-   <div class="testL">
-      <a href="./subhtml/webhistory.html"><p class="testp">见往事尔</p></a>
-   </div>
-
-   <div class="testC">
-      <a href="./subhtml/darksusy.html"><p class="testp">darksusy</p></a>
-   </div>
-
-   <div class="testC">
-      <a href="./subhtml/genie.html"><p class="testp">genie</p></a>
-   </div>
-
-   <div class="testR">
-     <a href="./subhtml/nuwro.html"> <p class="testp">NuWro</p></a>
-   </div>
+    <span id="bottom-copyright">Copyright © 2020 - 2020 Tang Jiang's Group. All Rights Reserved. 中山大学唐健团队 版权所有</span>
    
-<!--中下部Geant4动图-->
-<div id="geant4-gif-div">
-
-<div class="geant4-gif-subdiv">
-<img src="./picture/geant4-B1.gif" alt="geant4-B1">
-</div>
-<div class="geant4-gif-subdiv">
-<img src="./picture/geant4-B2.gif" alt="geant4-B1">
-</div>
-<div class="geant4-gif-subdiv">
-<img src="./picture/geant4-B3.gif" alt="geant4-B1">
-</div>
-
-</div>
-   
-   
-<!--底部声明-->
-<div class="low">
-
-<div class="low-logo">
-<img src="./logo/sysulogocir.png" alt="sysulogocir " >
-</div>
-
-<div class="low-span-all">
-<p><span class="low-span">网站主办人：唐健 </span>&emsp;&emsp;&emsp;&emsp; <span class="low-span">运行维护人：赵问问</span><span class="low-span">&emsp;&emsp;&emsp;&emsp;&emsp;联系方式：zhaoww7@mail2.sysu.edu.cn</span> </p>
-<p><a href="./subindex/contact.html"><span class="low-span">版权声明 </span></a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<a href="./subindex/contact.html"><span class="low-span">免责声明</span></a></p>
-<p><span class="low-span">通讯地址：:广州市新港西路135号 &emsp;&ensp;邮编:510275</span> </p>
-<p><span class="low-span">Address: No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China</span></p>
-
-</div>
-
 </div>
 
 

@@ -1,0 +1,64 @@
+/********
+    本CSS提供顶部 标题与菜单 样式
+    一般情况请勿改动
+        ————赵问问 2020年5月19日 15:55
+********/
+
+
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+}
+
+.menu-link:link {
+    color:white;
+    text-decoration:none ;
+}
+
+.menu-link:visited {
+    color:white;
+    text-decoration:none;
+}
+    
+.menu-link:hover {
+    color:white;
+    text-decoration:none;
+    }
+    
+.menu-link:active {
+    color:white;
+    text-decoration:none;
+}
+
+/*************** 最顶部logo **************/
+#top{
+    width: 89.7%;
+    border: 2px solid teal;
+    margin-top: 0em;
+    padding-left: 10%;
+    height: 74px;
+
+    color: yellow;
+    background-color: teal;
+    font-size: 20pt;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+}
+
+/*************** 菜单按钮 **************/
+#menu{
+    border: 2px solid skyblue;
+    height: 41px;
+    margin-bottom: 20px;
+    background-color: skyblue;
+}
+#menu-items{
+    text-align: center;
+    margin-top: 6px;
+    width: 100%;
+    color: white;
+    font-family:SimHei;
+    font-size: 16pt;
+}
