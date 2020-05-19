@@ -24,6 +24,6 @@
     color: white;
     /*word-spacing: 1px;               单词间距*/
     letter-spacing: 1px;          /* 漢字间距*/
-    text-indent: 2em;
+    text-indent: 2em;             /* 首行缩进 */
     
 }
