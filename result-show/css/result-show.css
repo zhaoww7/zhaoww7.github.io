@@ -1,0 +1,65 @@
+/**************** 点击链接，了解更多 ****************/
+#notice{
+    width: 90%;
+    border-bottom:2px solid teal;
+    margin: 50px auto 50px;
+    padding-bottom: 14px;
+    text-align: center;
+    color: #666666;
+    font-size: 20pt;
+    font-family: SimHei;
+}
+
+/**************** 图形文字总大框 ****************/
+.main{
+    position: static;
+    width: 90%;
+    height: 15em;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    margin: 25px auto 50px;
+
+}
+/**************** 图形框 ****************/
+#pic{
+
+    float: left;
+    width: 25%;
+    height: 15em;
+    margin-left: 10px;
+    /* border: 2px solid blue; */
+}
+/**************** 文字框 ****************/
+.text{
+    float: left;
+    width: 70%;
+    height: 15em;
+    /* border: 2px solid yellow; */
+    margin: 0 auto 0 4%;
+    color: #666666;
+    /*word-spacing: 1px;               单词间距*/
+    letter-spacing: 1px;          /* 漢字间距*/
+    text-indent: 2em;
+    
+}
+
+.title{
+    border-left:6px solid teal;
+    padding-left: 0;
+    color: black;
+    font-size:16pt ;
+    font-family: SimHei;
+    
+}
+.cite{
+    font-size: 8pt;
+    text-align: center;
+}
+
+/**************** 测试：固定不动的元素 ****************/
+/* .static{
+    position: fixed;
+    width: 10%;
+    height: 50px;
+    border: 2px solid red;
+} */

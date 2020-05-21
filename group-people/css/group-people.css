@@ -1,0 +1,84 @@
+a{
+    text-decoration: none;
+}
+
+/********************* 学历层次分割线 *********************/
+.text{
+    width: 90%;
+    margin: 20px auto 20px;
+    border-bottom: 2px solid skyblue;
+    padding-left: 40px;
+    text-align: left;
+    color: teal;
+    font-size: 24pt;
+    font-family: SimHei;
+}
+
+/********************* 唐健老师介绍 *********************/
+#tj-pic{
+    width: 14%;
+    margin: 20px 43% 20px;
+}
+#tj-text{
+    width: 90%;
+    margin: 0px auto 20px;
+    text-align: center;
+    color: #666666;
+    font-size: 16pt;
+    font-family: SimHei; 
+}
+
+/********************* 博士后与硕士研究生 *********************/
+.research{
+
+    width: 90%;
+    margin: 40px auto 20px;
+    text-align: center;
+    font-size: 16pt;
+    font-family: SimHei;
+}
+
+/********************* 本科生 *********************/
+#benkesheng{
+    width: 80%;
+    margin: auto ;
+    height: 180px;
+
+}
+.undergraduate{
+    float: left;
+    width: 26.96%;
+    margin: 0 3% 0;
+    color: #666666;
+    font-size: 12pt;
+    line-height: 20pt;
+    font-family: SimHei;
+}
+.undergraduate p{
+    padding-bottom: 5px;
+    border-bottom:1.5px solid #bebebe;
+}
+.undergraduate ul{
+    list-style: none;
+    font-size: 16pt;
+}
+
+/********************* 毕业生列表 *********************/
+.graduate{
+    
+    width: 90%;
+    margin: 40px auto 20px;
+    text-align: left ;
+    color: #666666;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 28pt;
+    
+}
+.graduate-div table td{
+    border:1px solid #bebebe;
+    height: 50px;
+    padding-left: 20px;
+}
+
+
