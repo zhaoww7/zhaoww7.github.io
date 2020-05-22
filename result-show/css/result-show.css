@@ -1,3 +1,4 @@
+
 /**************** 点击链接，了解更多 ****************/
 #notice{
     width: 90%;
@@ -15,8 +16,8 @@
     position: static;
     width: 90%;
     height: 15em;
-    border: 2px solid skyblue;
-    border-radius: 10px;
+    border-bottom: 2px solid skyblue;
+
     margin: 25px auto 50px;
 
 }
@@ -51,9 +52,13 @@
     font-family: SimHei;
     
 }
+
+
+
 .cite{
     font-size: 8pt;
-    text-align: center;
+    text-align: left;
+    color: teal;
 }
 
 /**************** 测试：固定不动的元素 ****************/
