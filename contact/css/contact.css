@@ -1,0 +1,53 @@
+a:link {
+    color:black;
+    text-decoration:none ;
+}
+
+a:visited {
+    color:black;
+    text-decoration:none;
+}
+    
+a:hover {
+    color:black;
+    text-decoration:none;
+    }
+    
+a:active {
+    color:black;
+    text-decoration:none;
+}
+
+/****************  ****************/
+.text{
+    width: 90%;
+    margin: 60px auto 20px;
+    border-bottom: 2px solid skyblue;
+    padding-left: 40px;
+    text-align: left;
+    color: teal;
+    font-size: 24pt;
+    font-family: SimHei;
+}
+
+/****************  ****************/
+.research{
+
+    width: 50%;
+    margin: 30px 215px 20px;
+    text-align: left;
+    font-size: 16pt;
+    font-family: SimHei;
+}
+
+#weather{
+    width: 10%;
+    transform: translate(750%,-89%);
+}
+
+/**************** 地图 ****************/
+#map{
+    width: 700px;
+    margin: 20px 0px 0px 160px;
+
+}

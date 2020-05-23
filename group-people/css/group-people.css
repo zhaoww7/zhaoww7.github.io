@@ -16,8 +16,9 @@ a{
 
 /********************* 唐健老师介绍 *********************/
 #tj-pic{
-    width: 14%;
-    margin: 20px 43% 20px;
+    width: 25%;
+    margin: 20px auto 20px;
+    transform: translateX(148%);
 }
 #tj-text{
     width: 90%;
