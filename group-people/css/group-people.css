@@ -46,11 +46,15 @@ a:active {
 .research{
 
     width: 90%;
-    margin: 40px auto 20px;
-    text-align: center;
+    margin-top: 40px 40px 20px;
+    text-align: left;
     font-size: 16pt;
     font-family: SimHei;
 }
+.doc-msc{
+    margin-left: 70px;
+}
+
 
 /********************* 本科生 *********************/
 #benkesheng{
