@@ -1,6 +1,18 @@
+/**************** 点击链接，了解更多 ****************/
+#notice{
+    width: 90%;
+    border-bottom:2px solid teal;
+    margin: 50px auto 50px;
+    padding-bottom: 14px;
+    text-align: center;
+    color: #666666;
+    font-size: 20pt;
+    font-family: SimHei;
+}
+
 #root{
     border-bottom: 2px solid skyblue;
-    width: 96%;
+    width: 90%;
     height: 150px;
     margin: 0 auto 20px;
 }
@@ -23,5 +35,6 @@
     color: #666666;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 

@@ -1,6 +1,7 @@
 a{
     text-decoration: none;
 }
+
 /****************** 简介、图片、成绩 总框框 ****************/
 #main{
     width: 90%;
@@ -61,105 +62,42 @@ a{
 
 /****************** 标题及其上下分割线 ****************/
 .title{
-    width: 90%;
+    width: 80%;
     padding-bottom:  1em;
     border-bottom:2px solid #666666;
-    margin: 40px auto 0px;
+    margin: 50px auto 0px;
     text-align: center;
     line-height: 1pt; 
     color: teal;
     font-size: 16pt;
 }
-
-/* 三个主要的业绩排版 */
-#achive-all{
- 
-    width: 90%;
-    height: 830px;
-    /* border-top: 2px solid teal; */
-    margin: 30px auto 10px;
-}
-
-#achive-left{
-    float: left;
-    width: 48%;
-    /* border: 2px solid red; */
-
-}
-#achive-left-up{
-
-    width: 90%;
-    height: 350px;
-    /* border-bottom: 2px solid yellow; */
-}
-#achive-left-down{
-
-    width: 90%;
-    height: 400px;
-    /* border: 2px solid blue; */
-}
-#achive-right{
-    float: left;
-    width: 48%;
-    height: 800px;
-    border-left: 2px solid #ebebeb;
-    padding-left: 25px;
-    margin-left: 10px;
-}
-
-
-
-/****************** 加速器中微子实验成绩 ****************/
-#achive-1-pic{
-    width:80%;
-    margin:25pt 10%  0;
-  
-    border-radius: 5px;
-}
-#achive-1-text{
+#achive-text{
+    margin: 25px auto  50px;
+    margin-left: 160px;
+    width: 80%;
     color: #666666;
-    font-size: 13pt;
-    text-align: center;
-    /* border:5px solid red; */
-    margin: 20px 0 50px ;
-}
-
-/****************** 低本底探测器技术成绩 ****************/
-#achive-2-pic{
-    width:80%;
-    margin:25pt 10%  0;
-    border-radius: 5px;
-}
-#achive-2-text{
-    color: #666666;
-    font-size: 13pt;
-    text-align: center;
-    /* border:5px solid red; */
-    margin: 10px 0 50px;
-}
-
-/****************** COMET: search for new physics beyond SM 成绩 ****************/
-.achive-3-pic{
-    width:90%;
-    margin:25pt 5.4%  20px;
-    border-radius: 5px;
-}
-#achive-3-text{
-    color: #666666;
-    font-size: 13pt;
+    font-style: 18pt;
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 4px;               /*单词间距*/
-    letter-spacing: 0.5px;           /*字母间距*/
-    line-height: 24px;
-    /* border:5px solid red;  */
-    width: 90%;
-    margin: 10px auto  50px 5%;
+    letter-spacing: 1px;           /*字母间距*/
+    line-height: 30pt;
+    
 }
 
 /****************** 科研成果35+篇论文情况 ****************/
+#paper-index{
+    margin-left: 11%;
+    padding-left: 4%;
+    line-height: 34px;
+    font-size: 14pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    border-left:8px solid teal;
+}
+
 #achive-paper{
     margin: 25px auto  50px;
-    width: 90%;
+    width: 80%;
     color: #666666;
     font-style: 18pt;
     font-family: Arial, Helvetica, sans-serif;
@@ -168,16 +106,9 @@ a{
     line-height: 20pt;
     
 }
-#paper-index{
-    margin-left: 5%;
-    padding-left: 5%;
-    line-height: 34px;
-    font-size: 14pt;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #666666;
-    border-left:6px solid teal;
-}
 
+
+/****************** 科研相关荣誉 ****************/
 #achive-bottom{
     width: 100%;
     margin: 25px auto 50px ;
