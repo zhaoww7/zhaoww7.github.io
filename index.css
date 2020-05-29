@@ -41,10 +41,7 @@ a{
 	height: 390px;
 	margin: 50px 10px auto;
     overflow: hidden;
-
-
 }
-
 .main li{
 	width: 120px;
 	float: left;
@@ -53,7 +50,6 @@ a{
 	position: relative;
 	transition: all 1s ;
 }
-
 .flag{
 	position: absolute;
 	left: 0;
@@ -153,6 +149,7 @@ h6{
     border-top : 2px solid #c0c0c0;
     width: 96%;
     margin-left: 2%;
+    margin-top: 60px;
     height: 300px;
     color: #666666;
  
