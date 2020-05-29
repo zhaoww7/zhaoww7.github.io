@@ -55,14 +55,31 @@
     <p>Linux和macOS下每次都需要输入密码，使用秘钥登录可以免除这个麻烦，相关方法请百度，这里以后我再补充。</p>
 
     <h1>四、账户概况</h1>
-    <p>1.个人存储空间</p>
+    <h2>1.个人存储空间</h2>
+    <p>计算集群给BESIII实验用户提供了5个存储目录，这些目录空间、作用各不相同。</p>
+    <p>/afs/ihep.ac.cn/users/username : 500MB 登录后默认进入的目录</p>
+    <p>/scratchfs/bes/username : 50GB</p>
+    <p>/scratchfs/bes/username : 500GB （官方说只保留两周，但实际上无限期保存）</p>
+    <p>/workfs/bes/username : 5GB</p>
+    <p>/home/bes/userdata/username : 200MB </p>
+    <p>一般而言，前面三个目录是最常用、最有用和最够用的，后面两个几乎没用过。</p>
+    <p>注意：所有目录存储时都不能超过限额。经常使用 du -sh 查看存储情况。</p>
 
-    <p>2.目录结构</p>
+    <h2>2.目录结构</h2>
+    <p>第一次登录集群时，上述五个目录都是空的，所以设置环境后再说目录结构。</p>
 
-    <p>3.数据存储目录</p>
-
+    <h2>3.数据存储目录</h2>
+    <p>/afs/ihep.ac.cn/bes3/offline/Boss/ 存储了BOSS版本从6.0.0到最新版(目前是7.0.5)的所有发行版，你可以一览壮观。</p>
+    <p>/afs/ihep.ac.cn/bes3/offline/Boss/7.0.5 存储了BOSS 7.0.5版本的功能模块。</p>
+    <p>/待写 存储了BESIII探测器获取的真实数据</p>
+    <p>/待写 存储了经过重建之后的数据</p>
+    <p>/待写 存储了高能所对应真实数据所做的模拟的数据</p>
 
     <h1>五、设置环境</h1>
+    <p><a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page">BOSS主页</a>，进入页面需要使用统一认证账号。
+        <a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/How_to_setup_BOSS_environment_on_lxslc">设置环境</a>可以从这里参考。
+        但是里面 $cmt co TestRelease 有问题，详情看下面的视频手把手设置环境。如果您有幸到高能所可以找马秋梅老师更改一下。 </p>
+    <p>参见<a href="https://www.bilibili.com/video/BV1oE411j7ik">视频</a>，后续我会精简视频，争取缩短视频时间（有更多三连我会更快更新嗷嗷嗷）。 </p>
 
 
     <h1>六、模拟、重建和分析</h1>
