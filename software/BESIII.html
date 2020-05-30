@@ -46,8 +46,8 @@
     <p>计算集群使用Linux操作系统，但是并非完全一致，有SLC6和SLC7两个版本的操作系统，逐渐SLC7是主流，目前我们还是以SLC6为例。</p>
     <h2>1.windows登录集群</h2>
     <p>远程登录的工具是ssh，提供ssh的有很多，windows的cmd、powershell都提供，但是这两个实在难看还难用。技术报告手册里面推荐了好几个，这里推荐使用xshell</p>
-    <p>打开xshell之后，需要填写以下内容：名称：随便起个名字，主机：lxslc6.ihep.ac.cn，端口：22 。这些就够了</p>
-    <p>点击连接，然后会让输入用户名、密码。把邮件发来的用户名密码填上去，点击记住用户名、密码，以后更方便登录。</p>
+    <p>（1）打开xshell之后，需要填写以下内容：名称：随便起个名字，主机：lxslc6.ihep.ac.cn，端口：22 。这些就够了</p>
+    <p>（2）点击连接，然后会让输入用户名、密码。把邮件发来的用户名密码填上去，点击记住用户名、密码，以后更方便登录。</p>
     <p>正常情况上述方法就成功登录计算集群了。</p>
     <h2>2.Linux和macOS登录集群</h2>
     <p>打开终端，输入 ssh username@lxslc6.ihep.ac.cn ,然后根据提示输入密码。嗯，就是这么简单。</p>
@@ -57,11 +57,11 @@
     <h1>四、账户概况</h1>
     <h2>1.个人存储空间</h2>
     <p>计算集群给BESIII实验用户提供了5个存储目录，这些目录空间、作用各不相同。</p>
-    <p>/afs/ihep.ac.cn/users/username : 500MB 登录后默认进入的目录</p>
-    <p>/scratchfs/bes/username : 50GB</p>
-    <p>/scratchfs/bes/username : 500GB （官方说只保留两周，但实际上无限期保存）</p>
-    <p>/workfs/bes/username : 5GB</p>
-    <p>/home/bes/userdata/username : 200MB </p>
+    <p>&emsp;/afs/ihep.ac.cn/users/username : 500MB 登录后默认进入的目录</p>
+    <p>&emsp;/scratchfs/bes/username : 50GB</p>
+    <p>&emsp;/scratchfs/bes/username : 500GB （官方说只保留两周，但实际上一直在保存）</p>
+    <p>&emsp;/workfs/bes/username : 5GB</p>
+    <p>&emsp;/home/bes/userdata/username : 200MB </p>
     <p>一般而言，前面三个目录是最常用、最有用和最够用的，后面两个几乎没用过。</p>
     <p>注意：所有目录存储时都不能超过限额。经常使用 du -sh 查看存储情况。</p>
 
@@ -69,28 +69,92 @@
     <p>第一次登录集群时，上述五个目录都是空的，所以设置环境后再说目录结构。</p>
 
     <h2>3.数据存储目录</h2>
-    <p>/afs/ihep.ac.cn/bes3/offline/Boss/ 存储了BOSS版本从6.0.0到最新版(目前是7.0.5)的所有发行版，你可以一览壮观。</p>
-    <p>/afs/ihep.ac.cn/bes3/offline/Boss/7.0.5 存储了BOSS 7.0.5版本的功能模块。</p>
-    <p>/待写 存储了BESIII探测器获取的真实数据</p>
-    <p>/待写 存储了经过重建之后的数据</p>
-    <p>/待写 存储了高能所对应真实数据所做的模拟的数据</p>
+    <p>&emsp; /afs/ihep.ac.cn/bes3/offline/Boss/ 存储了BOSS版本从6.0.0到最新版(目前是7.0.5)的所有发行版，你可以一览壮观。</p>
+    <p>&emsp; /afs/ihep.ac.cn/bes3/offline/Boss/7.0.5 存储了BOSS 7.0.5版本的功能模块。</p>
+    <p>&emsp; /待写 存储了BESIII探测器获取的真实数据</p>
+    <p>&emsp; /待写 存储了经过重建之后的数据</p>
+    <p>&emsp; /待写 存储了高能所对应真实数据所做的模拟的数据</p>
 
     <h1>五、设置环境</h1>
-    <p><a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page">BOSS主页</a>，进入页面需要使用统一认证账号。
-        <a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/How_to_setup_BOSS_environment_on_lxslc">设置环境</a>可以从这里参考。
+    <p><a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page">BOSS主页</a>有详细的过程，进入页面需要使用统一认证账号。
+        <a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/How_to_setup_BOSS_environment_on_lxslc">设置环境的页面</a>。
         但是里面 $cmt co TestRelease 有问题，详情看下面的视频手把手设置环境。如果您有幸到高能所可以找马秋梅老师更改一下。 </p>
     <p>参见<a href="https://www.bilibili.com/video/BV1oE411j7ik">视频</a>，后续我会精简视频，争取缩短视频时间（有更多三连我会更快更新嗷嗷嗷）。 </p>
 
 
-    <h1>六、模拟、重建和分析</h1>
+    <h1>六、模拟、重建和分析</h1> 
+    <h2>1.模拟</h2>
+    <p>模拟，就是根据加速器真实的情况，人为地设置一定的对撞条件、探测环境，使用软件模拟粒子的对撞、衰变和探测。模拟可以用来分析本底、验证实际情况的可靠性。</p>
+    <p>BOSS内置Geant4等软件包进行模拟操作，假设环境设置在的 /afs/ihep.ac.cn/users/username 目录下，具体操作如下：</p>
+    <p>&emsp;cd ~/workarea/TestRelease/TestRelease-00-00-86/run  </p>
+    <p>&emsp;boss.exe jobOptions_sim.txt  即可 </p>
+    <p>说明：jobOptions_sim.txt 里面写了模拟的条件、模拟数量等，修改内容即可改变模拟条件；
+       <br>&emsp;&emsp;&ensp;  jobOptions_sim.txt 需要引入衰变比卡，用来控制粒子衰变产物与分支比，即当前目录下的 rhopi.dec 文件；
+       <br>&emsp;&emsp;&ensp;  模拟的结果写入当前目录的  psip.rtraw 文件。 </p>
+       
+    <h2>2.重建</h2>
+    <p>重建，就是将模拟输出的 *rtraw 文件重建得到可供分析的文件，或者将探测器得到的 *raw 格式的真实数据重建为可供分析的文件。</p>
+    <p>假设环境设置在的 /afs/ihep.ac.cn/users/username 目录下，具体操作如下：</p>
+    <p>&emsp;cd ~/workarea/TestRelease/TestRelease-00-00-86/run  </p>
+    <p>&emsp;boss.exe jobOptions_rec.txt  即可 </p>
+    <p>说明：jobOptions_rec.txt 里面引入了模拟得到的文件：*rtraw（也可以是真实数据*raw）、定义了输出文件：*dst（信息简略但实用）或者*rec(信息详细但少用);
+       <br>&emsp;&emsp;&ensp;  jobOptions_rec.txt 规定了重建数量；
+    </p>
+   
+    <h2>3.分析</h2>
+    <p>分析，就是将重建之后的数据做条件选择，得到符合要求的数据。</p>
+    <p>假设环境设置在的 /afs/ihep.ac.cn/users/username 目录下，具体操作如下：</p>
+    <p>&emsp;cd ~/workarea/TestRelease/TestRelease-00-00-86/run  </p>
+    <p>&emsp;boss.exe jobOptions_ana_rhopi.txt  即可 </p>
+    <p>说明：jobOptions_ana_rhopi.txt 里面引入了重建得到的文件：*dst（也可以是*rec）、定义了输出文件：*root（对，就是ROOT软件能读取的文件类型);
+       <br>&emsp;&emsp;&ensp; jobOptions_ana_rhopi.txt 规定了分析数量；
+       <br>&emsp;&emsp;&ensp; jobOptions_ana_rhopi.txt 里面引入了分析算法包，这个算法包规定了粒子的选取条件（分析数据全靠它！）
+    </p>
+
+    <h2>4.算法包结构</h2>
+    <p>上面说到“分析算法包”，也说到“cd ~/workarea/TestRelease/TestRelease-00-00-86/run”，什么叫“包”，“包”的目录结构是什么？</p>
+    <p>BOSS的每个功能模块是相互独立的，实现功能模块的一组代码叫做算法包（我的理解）。 BOSS采用CVS做版本控制（目前最流行的是git了），cmt作为配置工具，算法包需要符合这两个软件的目录结构要求。</p>
+    <p>典型的算法包：TestRelease（测试安装是否成功的例子）、DatabaseSvc（采用哪个数据库）、ReadDBBase（读取数据库）、 Simulation（模拟结果画图）等等很多。</p>
+    <p>基本结构：</p>
+    <img src="picture/package.png" alt="" width="40%">
+    <p>粗略一看，这几个包内都有CVS、cmt、share、x86_64-slc6-gcc-opt，上一层目录是AAA-00-00-86这种形式，上两层目录就是AAA了。</p>
+    <p>排除TestRelease之后仔细观察，基本每个包都是六个文件，其中一个文件和软件包名称相同，其他还多个src。AAA-00-00-86表示版本号，同一个软件包内可以存着多个版本。</p>
+    <p>一般情况，算法包的实现都是通过src内的*.cxx文件，修改cxx文件后在cmt内编译后就能使得算法包生效。</p>
+    <p>这些特征用文字不太能说清楚，相信你仔细看看就能观察出来。</p>
 
     <h1>七、提交作业</h1>
     <h2>1.基本概念</h2>
+    <p>集群是很多很多CPU核的系统，一部分CPU只用于登录，称为登录节点；大部分CPU用于计算，称为计算节点。模拟、重建、分析的计算量很大的话，在登录节点运行就很不合适，需要将他们提交到计算节点运行，并且把计算结果返回到我们的目录。</p>
+    <p>用下面的图表示一下这个过程</p> 
+    <img src="picture/nodejob.png" alt=""width="40%">
 
-    <h2>2.HTCondor提交作业</h2>
+    <h2>2.HTCondor提交作业</h2>    
+    <p>BESIII实验支持HTCondor作业，提交作业方法很简单，只需要把boss.exe换成boss.condor </p>
+    <p>上面是针对BESIII实验做的优化，更一般地，有下面方法：</p>
+    <p>&emsp;（1）编写提交作业的脚本：比如建个sub文件，里面写入boss.exe sim.txt</p>
+    <p>&emsp;（2）添加可执行权限：chmod +x sub</p>
+    <p>&emsp;（3）提交作业：hep_sub -g physics sub</p>
+    <p>&emsp;（4）查看自己作业状态：hep_q -u </p>
+    <p>也很方便，不是吗？</p>
+
 
     <h1>八、参考资料</h1>
+    <ul>
+        <li>BOSS主页：包含关于BOSS的一切<a href="https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page">&emsp; https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page</a></li>
+        <li>高能所计算环境使用手册：侧重集群方面，需配合BOSS主页<a href="http://afsapply.ihep.ac.cn/cchelp/zh/">&emsp; http://afsapply.ihep.ac.cn/cchelp/zh/</a></li>
+        <li>互助平台：遇到任何技术问题，都可以来这里！有问题来问，没问题逛逛，绝对收获满满！<a href="http://helpdesk.ihep.ac.cn/ticket/">&emsp; http://helpdesk.ihep.ac.cn/ticket/</a> </li>
+        <li>BESIII合作组论文集：机密文件尚未发表请勿外传<a href="https://docbes3.ihep.ac.cn/cgi-bin/DocDB/DocumentDatabase">&emsp; https://docbes3.ihep.ac.cn/cgi-bin/DocDB/DocumentDatabase</a></li>
+        <li>BESIII合作组会议报告：包含汇报PPT等研究资料<a href="https://indico.ihep.ac.cn/">&emsp; https://indico.ihep.ac.cn/</a></li>
+        <li>BOSS源代码：是否思考过从源代码学习软件的使用......<a href="https://docbes3.ihep.ac.cn/viewvc/cgi-bin/viewvc.cgi/BESIII/">&emsp; https://docbes3.ihep.ac.cn/viewvc/cgi-bin/viewvc.cgi/BESIII/</a></li>
+        <li>数据管理平台：查询对撞机每次取数的参数，网页很卡<a href="http://offline.ihep.ac.cn:8080/bemp/mainMenu.html">&emsp; http://offline.ihep.ac.cn:8080/bemp/mainMenu.html</a></li>
+        <li>BEPCII数据库： </li>
+    </ul>
+
     <h1>九、联系我们</h1>
+    <ul>
+        <li>赵问问：zhaoww2013@126.com</li>
+        <li>虚位以待</li>
+    </ul>
 
 
 
