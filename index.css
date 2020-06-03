@@ -144,6 +144,31 @@ h6{
     letter-spacing: 8px;
 }
 
+/*************** 名言警句 **************/
+#AmIContent{
+    width: 92%;
+    margin-left: 4%;
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 2px solid skyblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16pt ;
+    letter-spacing: ;          /* 漢字间距*/
+    text-indent: 2em;             /* 首行缩进 */
+    line-height: 26pt;
+    color: #666666;
+}
+#Renzo{
+    width: 40%;
+    margin-left: 58%;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    color:teal;
+}
+
+
+
 /*************** 最底部框 **************/
 #bottom{
     border-top : 2px solid #c0c0c0;
