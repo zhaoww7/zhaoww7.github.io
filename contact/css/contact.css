@@ -45,9 +45,28 @@ a:active {
     transform: translate(750%,-89%);
 }
 
+/**************** 代码统计 ****************/
+ #cloc-code{
+  transform: translate(85%,-140%);  /*  (向右，向下)  */
+    
+}
+
+
+/*  */
+#map-weather{
+    margin-top: -10em;
+    margin-left: 6%;
+
+    width: 90%;
+}
+
 /**************** 地图 ****************/
 #map{
-    width: 700px;
-    margin: 20px 0px 0px 160px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 4em;
 
+}
+#weather-view-he{
+    float: left;
 }
