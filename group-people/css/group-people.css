@@ -45,16 +45,12 @@ a:active {
 /********************* 博士后与硕士研究生 *********************/
 .research{
 
-    width: 90%;
-    margin-top: 40px 40px 20px;
+    width: 70%;
+    margin: 40px 16em 40px;
     text-align: left;
     font-size: 16pt;
-    font-family: SimHei;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.doc-msc{
-    margin-left: 70px;
-}
-
 
 /********************* 本科生 *********************/
 #benkesheng{
@@ -67,10 +63,10 @@ a:active {
     float: left;
     width: 26.96%;
     margin: 0 3% 0;
-    color: #666666;
+    /* color: #666666; */
     font-size: 12pt;
     line-height: 20pt;
-    font-family: SimHei;
+    font-family:Arial, Helvetica, sans-serif;  /*SimHei*/
 }
 .undergraduate p{
     padding-bottom: 5px;
