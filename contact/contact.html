@@ -39,8 +39,15 @@
     <p class="research">网站维护人：赵问问 zhaoww7@mail2.sysu.edu.cn</p>
 
 <p class="text">通讯地址</p>
-    <p class="research"><a href="https://map.baidu.com/@12613409.518178392,2627678.9615067234,17.18z"> 广东省广州市海珠区新港西路135号中山大学，邮编：510275</a></p>
-    <p class="research"> No.135, Xingang Xi Road, Guangzhou, 510275, P.R.China，</p>
+    <p class="research"> 广东省广州市海珠区新港西路135号中山大学，邮编：510275。
+        <a href="https://map.baidu.com/@12613409.518178392,2627678.9615067234,17.18z" ><em>地图导航，</em> </a>
+        <a href="http://forecast.weather.com.cn/town/weathern/101280101036.shtml"><em>天气预报</em></a>
+    </p>
+    <p class="research"> No.135, Xingang Xi Road, Guangzhou, 510275, P.R.China. 
+        <a href="https://www.google.com/maps/@23.0981392,113.2990942,16z?hl=en-US" ><em>map，</em> </a>
+        <a href="https://www.google.com/search?hl=en-US&sxsrf=ALeKk03MDgkqnjjotQFV0ZHVyDNb_nQPKA:1591701806118&ei=LnHfXoXXBovWmAXGpoWYBA&q=guangzhou+weather"><em>weather</em></a>
+    
+    </p>
 
 
 <p class="text">开发者选项</p>
@@ -52,17 +59,33 @@
 
     <img src="picture/cloc-code.png" alt="代码统计" float="left" id="cloc-code" >
 
+<!-- 
 <p class="text" style="transform: translate(0%,-500%);">地图导航</p>
+    <div id="map-weather">
+        <div id="map">
+            <iframe src="map.html" width="700px" height="300px" frameborder="0" scrolling="no"></iframe>
+        </div>
 
-<div id="map-weather">
-    <div id="map">
-        <iframe src="map.html" width="700px" height="300px" frameborder="0" scrolling="no"></iframe>
+        <div id="weather-view-he"></div>
+            <script>WIDGET = {ID: 'yKc1SQERWJ'};</script>
+            <script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+    </div> -->
+
+<p id="text-c">留言板</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="comment">
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                avatar: 'mp',                                   // 头像
+                meta: ['nick','mail'],                          // 评论人属性
+                // recordIP: true,                              // 记录IP
+                appId: 'krwPcqLP5j2jwR5RwnqNP29d-gzGzoHsz',
+                appKey: 'VoGrgDF5S1PGHyJaAbyBGjFK'
+            })
+        </script>
     </div>
-
-    <div id="weather-view-he"></div>
-        <script>WIDGET = {ID: 'yKc1SQERWJ'};</script>
-        <script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
-</div>
 
 
 
