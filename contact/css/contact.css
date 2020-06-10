@@ -18,7 +18,7 @@ a:active {
     text-decoration:none;
 }
 
-/****************  ****************/
+/**************** 标题 ****************/
 .text{
     width: 90%;
     margin: 60px auto 20px;
@@ -30,7 +30,7 @@ a:active {
     font-family: SimHei;
 }
 
-/****************  ****************/
+/**************** 标题内正文 ****************/
 .research{
 
     width: 70%;
@@ -40,38 +40,23 @@ a:active {
     font-family: SimHei;
 }
 
-#weather{
-    width: 10%;
-    transform: translate(750%,-89%);
+/**************** 代码统计左侧列表 ****************/
+#coder{
+    float: left;
+    width: 40%;
+
 }
 
 /**************** 代码统计 ****************/
  #cloc-code{
-  transform: translate(85%,-140%);  /*  (向右，向下)  */
+    float: left;
+    margin-top: 50px;
     
 }
 
 
-/*  */
-#map-weather{
-    margin-top: -10em;
-    margin-left: 6%;
 
-    width: 90%;
-}
-
-/**************** 地图 ****************/
-#map{
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 4em;
-
-}
-#weather-view-he{
-    float: left;
-}
-
-/**************** 评论 ****************/
+/**************** 评论 ****************
 #text-c{
     float: left;
     width: 90%;
@@ -85,9 +70,9 @@ a:active {
     font-family: SimHei;
 }
 
-#comment{
+ #comment{
     width: 90%;
 
     margin-left: 5%;
     float: left;
-}
+} */
