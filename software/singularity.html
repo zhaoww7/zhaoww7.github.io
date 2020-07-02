@@ -68,7 +68,7 @@
     <p>构建沙盒：</p>
     <p>&emsp;sudo singularity build Ubuntu docker://Ubuntu </p>
     <p>但是不需要sudo来构建仿佛也没问题，为了以后出现权限问题，这里建议不使用sudo创建沙盒。（存疑）</p>
-    <p>&emsp;singularity build Ubuntu docker://Ubuntu </p>
+    <p>&emsp;singularity build --sandbox Ubuntu docker://ubuntu </p>
 
     <h2>2.进入镜像、沙盒</h2>
     <p>虽然命令选项很多，但是我们记住一个就够用了：</p>
