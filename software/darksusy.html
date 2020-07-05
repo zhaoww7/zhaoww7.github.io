@@ -26,15 +26,19 @@
 
 
     <h2>2.darksusy安装方法</h2>
+    <p>安装依赖包：gcc、g++、gfortran、make</p>
+    <p>&emsp;sudo apt install gcc、g++、gfortran、make</p>
+        
     <p>尽管darksusy没有GNU规范的INSTALL文件，但是其README.INSTALL文件起着同样的作用，darksusy可算是这里几个软件里最好安装的了</p>
     <p>和上面介绍的一样，具体步骤如下：</p>
     <p>&emsp;./configure</p>
     <p>&emsp;make</p>
     <p>&emsp;sudo make install</p>
 
-    如果没有ROOT权限，那么可以通过制定路径安装：
+    <p>如果没有ROOT权限，那么可以通过制定路径安装：</p> 
     <p>&emsp;./configure  --prefix=/where/you/can/install </p>
     <p>&emsp;make</p>
+    <p>此时make可能出现无法创建 lib 的情况。仍需解决。</p>
     <p>&emsp;make install</p>
 
     <h2>3.darksusy的验证</h2>
