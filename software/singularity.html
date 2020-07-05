@@ -66,7 +66,7 @@
     <p>&emsp;sudo singularity build lolcow.sif docker://godlovedc/lolcow </p>
     <p>由于docker已经很成熟了，所以从dockerhub下载很不错。</p>
     <p>构建沙盒：</p>
-    <p>&emsp;sudo singularity build Ubuntu docker://Ubuntu </p>
+    <p>&emsp;sudo singularity build --sandbox Ubuntu docker://ubuntu </p>
     <p>但是不需要sudo来构建仿佛也没问题，为了以后出现权限问题，这里建议不使用sudo创建沙盒。（存疑）</p>
     <p>&emsp;singularity build --sandbox Ubuntu docker://ubuntu </p>
 
