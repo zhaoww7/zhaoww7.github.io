@@ -31,7 +31,7 @@
         <li>建议选择的软件包:</li>        
         <li>gfortran</li>
         <li>libssl-dev、libpcre3-dev、libglew1.5-dev、libftgl-dev、libmysqlclient-dev、libfftw3-dev、libcfitsio-dev</li>
-        <li>libavahi-compat-libdnssd-dev、libldap2-dev、libxml2-dev、libkrb5-dev、ibgsl-dev、</li>
+        <li>libavahi-compat-libdnssd-dev、libldap2-dev、libxml2-dev、libkrb5-dev、libgsl-dev、</li>
         <li>xlibmesa-glu-dev</li>
         <li>graphviz-dev</li>
         <li>python-dev、python-numpy-dev</li>
@@ -41,7 +41,7 @@
 
         <p>为了便于复制粘贴，下面给出整行的包名称：</p>
         <p>sudo apt install git dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev libpng-dev libjpeg-dev python</p>
-        <p>sudo apt install gfortran libssl-dev libpcre3-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev libavahi-compat-libdnssd-dev libldap2-dev libxml2-dev libkrb5-dev ibgsl-dev xlibmesa-glu-dev  graphviz-dev python-dev python-numpy-dev  r-base </p>
+        <p>sudo apt install gfortran libssl-dev libpcre3-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev libavahi-compat-libdnssd-dev libldap2-dev libxml2-dev libkrb5-dev libgsl-dev libmesa-glu-dev  graphviz-dev python-dev python-numpy-dev  r-base </p>
 
     <h2>2.编译安装ROOT</h2>
         <h3>(1)首先说明目录结构：</h3>
@@ -65,7 +65,7 @@
 
         <h3>(3)编译ROOT</h3>
         <p>执行完cmake就可以直接：</p>
-        <p>&emsp;cmake --build . -- j4</p>
+        <p>&emsp;cmake --build . -- -j4</p>
         <p>或者简单一点：</p>
         <p>&emsp;make -j4</p>
         <p>这里-j4 表示用4个核同时编译，具体选取几个核取决于你的电脑</p>
