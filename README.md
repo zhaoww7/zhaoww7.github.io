@@ -1,9 +1,8 @@
-# zhaoww7.github.io 
+# 中山大学唐健团队网站
 # [https://www.smooth-sysu.cn](https://www.smooth-sysu.cn)
 
-中山大学唐健团队网站
 
-主要提供团队宣传、高能物理软件的安装使用方法，例如ROOT、geant4、genie等
+本网站主要提供团队宣传、高能物理软件的安装使用方法，例如ROOT、geant4、genie等
 
 另外介绍团队成员、团队动态、研究课题、成果展示等
 

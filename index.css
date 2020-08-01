@@ -3,16 +3,13 @@ body{
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 40px;
+    background-color:  rgb(245, 245, 245);
 }
-a{
-    text-decoration : none;
-} 
+a{    text-decoration : none;} 
 
 /*************** 最顶部logo **************/
 
-
 /*************** 菜单按钮 **************/
-
 
 /*************** picture、news、about三部分总框 **************/
 #page{
@@ -35,38 +32,92 @@ a{
     width: 100%;
 
 }
-/************ 百叶窗效果 *************/
-.main{               /*   外围的框框   */
-	width: 90%;
-	height: 390px;
-	margin: 50px 10px auto;
-    overflow: hidden;
-}
-.main li{
-	width: 120px;
-	float: left;
-    border-left: 1px solid #dedede;
-    border-top: 1px solid #dbdbdb;
-	position: relative;
-	transition: all 1s ;
-}
-.flag{
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-    height: 60%;
-    padding-top: 1em;
-    line-height: 30px;
-    font-size: 12pt;
-    font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	color: #fff;
-	background: rgba(0, 0, 0, 0.5);
-}
+/************ 百叶窗效果（废弃） *************/
 
-.main:hover li{width:80px}
-.main li:hover{width:400px}
+/************     轮播图效果    *************/
+/* 总框 */
+.banner{
+    position: relative;
+    width: 90%;
+    height: 390px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 10px;
+
+}
+/* 三张图的总ul */
+.cont{
+    width: 100%;
+    height: 390px; 
+    /* box-shadow:2px 5px 15px rgba(0,0,0,0.5); */
+}
+/* 三张图之一 */
+.cont li{
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 390px;
+    list-style: none;
+    transform: translate(-40px,0px);    /*轮播图 图片位置 (左，上)*/
+}
+/* 三张图之一 */
+.item.active{
+    z-index: 50;
+
+}
+#Larrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 40px;
+    height: 60px;
+    z-index: 99;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;             /* =height */  
+    transform: translateY(-50%);
+    border-radius: 5px;
+    opacity:0.8;                   /*透明度*/
+    background-color: skyblue;
+}
+#Rarrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 40px;
+    height: 60px;
+    z-index: 99;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;              /* =height */    
+    transform: translateY(-50%);
+    border-radius: 5px;
+    opacity:0.8;                   /*透明度*/
+    background-color: skyblue;
+
+}
+.dot{
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translateY(45px);  /*下*/
+    display: flex;
+    z-index: 99;
+    list-style: none;
+}
+.dot .point{
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+    background-color: rgba(0,0,0,.8);
+    border-radius: 50%;
+}
+.point.active{                         /* 激活点颜色 */
+    background-color: skyblue;
+}
 
 /*************** 左下about框 **************/
 #about{

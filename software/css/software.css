@@ -1,40 +1,165 @@
-/**************** 点击链接，了解更多 ****************/
-#notice{
+a:link {
+    color:black;
+    text-decoration:none ;
+}
+a:visited {
+    color:black;
+    text-decoration:none;
+}
+a:hover {
+    color:black;
+    text-decoration:none;
+}
+a:active {
+    color:black;
+    text-decoration:none;
+}
+
+/**************** 标题 ****************/
+.title{
     width: 90%;
-    border-bottom:2px solid teal;
-    margin: 50px auto 50px;
-    padding-bottom: 14px;
-    text-align: center;
-    color: #666666;
-    font-size: 20pt;
+    margin: 60px auto 20px;
+    border-bottom: 2px solid skyblue;
+    padding-left: 40px;
+    text-align: left;
+    color: teal;
+    font-size: 24pt;
     font-family: SimHei;
 }
 
-#root{
-    border-bottom: 2px solid skyblue;
-    width: 90%;
-    height: 150px;
-    margin: 0 auto 20px;
+/******************* 计算平台 *******************/
+#computer{
+    height: 300px;
 }
-#root-img{
+#BESIII{
+    margin-left: 15%;
+    margin-top: 30px;         
+    float: left;
+    width: 25%;
+    height: auto;               /* 可以用 220px */
+    box-shadow:0px 5px 10px rgba(0,0,0,0.5)
+
+}
+#th-2{
+    margin-left: 20%;
+    margin-top: 30px;         
+    float:  left ;
+    width: 25%;
+    height: auto;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+
+}
+
+/************** 操作系统 *****************/
+#os{
+    height: 300px;
+}
+#vmware{
+    margin-left: 10%;
+    margin-top: 30px;         
     float: left;
     width: 20%;
-    height: 130px;
-    /* border: 2px solid yellow; */
-    
+    height: auto;   box-shadow:0 5px 10px rgba(0,0,0,0.5)
 }
-#root-text{
+#ubuntu{
+    margin-left: 10%;
+    margin-top: 30px;         
     float: left;
-    width: 75%;
-    height: 130px;
-    /* border: 2px solid blue; */
-    margin: 0 0 0 20px;
-    text-indent: 2em;
-    line-height: 20pt;
-    letter-spacing: 1px;
-    color: #666666;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    height: auto;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+}
+#centos{
+    margin-left: 10%;
+    margin-top: 30px;         
+    float: left;
+    width: 20%;
+    height: auto;   box-shadow:0 5px 10px rgba(0,0,0,0.5)
 }
 
+/**************** 物理软件 ***************/
+#software{
+  
+    height: 430px;              /* margin-bottom: 20px ;*/
+}
+#root{
+    margin-left: 10%;
+    margin-top: 30px;           /* 物理软件下划线到ROOT顶部距离50px */
+    width: 22%;
+    height: auto;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+}
+#geant4{
+    margin-left: 7%;
+    margin-top: 30px;
+    width: 22%;
+    height: auto;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+}
+#genie{
+    margin-left: 7%;
+    margin-top: 30px;
+    width: 22%;
+    height: auto;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+}
+#nuwro{
+    margin-left: 10%;
+    margin-top: 80px;
+    width: 20%;
+    height: auto;
+    float: left;
+    text-align: center;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
 
+}
+#darksusy{
+    margin-left: 9%;
+    margin-top: 133px;      /*  80+(203.5-97.75)/2 */
+    width: 22%;
+    height: auto;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
 
+}
+#singularity{
+    margin-left: 9%;
+    margin-top: 80px;
+    width: 20%;
+    height: auto;
+    float: left;
+    text-align: center;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+
+}
+
+/**************** 实用软件 ***************/
+#others{
+  
+    height: 400px;              /* margin-bottom: 20px ;*/
+}
+#LaTeX{
+    margin-left: 10%;
+    margin-top: 30px;           /* 物理软件下划线到ROOT顶部距离50px */
+    width: 22%;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+}
+#git{
+    margin-left: 7%;
+    margin-top: 30px;
+    width: 22%;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+
+}
+#xshell{
+    margin-left: 7%;
+    margin-top: 30px;
+    width: 22%;
+    float: left;
+    box-shadow:0 5px 10px rgba(0,0,0,0.5)
+}
