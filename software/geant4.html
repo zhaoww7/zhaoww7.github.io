@@ -21,7 +21,7 @@
     <ul>
         <li>git、dpkg-dev、g++、gcc、binutils、gfortran 、cmake（确定是3.3版本以上）、python、python-dev：装机必备</li>
         <li>libx11-dev、libxpm-dev、libxft-dev、libxext-dev、libxmu-dev、libpng-dev、libjpeg-dev：图形界面 X 服务必备</li>
-        <li>libssl-dev、libpcre3-dev、libglew-dev、libftgl-dev、libmysqlclient-dev、libfftw3-dev、libcfitsio-dev</li>
+        <li>libssl-dev、libpcre3-dev、libglew-dev、libftgl-dev、libmysqlclient-dev、libfftw3-dev、libcfitsio-dev、libgl1-mesa-dev、libxkbcommon-x11-dev</li>
         <li>libavahi-compat-libdnssd-dev、libldap2-dev、graphviz-dev、libxml2-dev、libkrb5-dev、libgsl-dev、libxerces-c-dev、libmotif-dev、libglw1-mesa-dev、opticalraytracer</li>
     </ul>
 
@@ -60,6 +60,8 @@ libxerces-c-dev
 libmotif-dev
 libglw1-mesa-dev
 opticalraytracer
+libgl1-mesa-dev
+libxkbcommon-x11-dev
     </p>
 
     <p>但是！最重要的是下面几项依赖，一定要安装：</p>
@@ -73,7 +75,6 @@ opticalraytracer
     <p>添加执行权限：&emsp;sudo chmod +x qt-opensource-linux-x64-5.14.2.run</p>
     <p>运行：&emsp;./qt-opensource-linux-x64-5.14.2.run </p>
     <p>图形化安装：可以全部勾选，安装过程很漫长</p>
-    <p>安装OpenGL：&emsp;sudo apt install libgl1-mesa-dev</p>
     <p>设置Qt环境：</p>
     <p>&emsp;&emsp;export PATH=/opt/Qt5.14.2/5.14.2/gcc_64/bin:/opt/Qt5.14.2/Tools/QtCreator/bin:$PATH</p>
     <p>export LD_LIBRARY_PATH=/opt/Qt5.14.2/5.14.2/gcc_64/lib:$LD_LIBRARY_PATH</p>
