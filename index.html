@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <link rel="icon" href="picture/comment-logo4.PNG">
     <link rel="stylesheet" href="top+menu.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="float.css">
 
     <title>首页</title>
 </head>
@@ -193,50 +194,45 @@
     });
 </script> 
 
+<!-------------首页浮动条幅  ---------------->
+<div id="img"   onmouseover="clearInterval(interval)" onmouseout="interval = setInterval('changePos()', delay)" > 
+    <span onclick="clearInterval(interval);img.style.visibility = 'hidden'"> <img src="picture/close1.png" alt="" width='8%'> </span> 
+    <a href="http://spe.sysu.edu.cn/node/605" target='blank'>
+        <p id='intertext' onload="return imgzoom(this,600);"  >      <!--  onclick="javascript:window.open(this.src);" -->
+
+       <span id='intertext-1'> 人才需求 </span> <br> <br>
+       <span id='intertext-2'> 博士后、特聘研究员、本科生科研助理等 </span> <br> 
+       <span id='intertext-3'> 每年拟招收硕士生2名，博士生1名 </span> 
+    
+        </p>
+        <!--img border="0" src="turn-5.png" width='100%' onload="return imgzoom(this,600);" onclick="javascript:window.open(this.src);"  id='piao-pic' -->
+    </a> 
+</div> 
+<script src="float.js"></script>
+
+
 
 <!-- 检测IP 、地区、浏览器 
-  
 <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
 <script type="text/javascript">  
         document.write('IP地址:' + returnCitySN["cip"] + ', CID:' + returnCitySN["cid"] + ', 地区:' + returnCitySN["cname"]+",浏览器版本:"+getBrowserInfo());
-        
     function getBrowserInfo(){
-    var agent = navigator.userAgent.toLowerCase() ;
-    var regStr_ie = /msie [\d.]+;/gi ;
-    var regStr_ff = /firefox\/[\d.]+/gi
-    var regStr_chrome = /chrome\/[\d.]+/gi ;
-    var regStr_saf = /safari\/[\d.]+/gi ;
-    
-    //IE
-    if(agent.indexOf("msie") > 0)
-    {
-        return agent.match(regStr_ie) ;
-    }
-
-    //firefox
-    if(agent.indexOf("firefox") > 0)
-    {
-        return agent.match(regStr_ff) ;
-    }
-
-    //Chrome
-    if(agent.indexOf("chrome") > 0)
-    {
-        return agent.match(regStr_chrome) ;
-    }
-
-    //Safari
-    if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0)
-    {
-        return agent.match(regStr_saf) ;
-    }
-
+        var agent = navigator.userAgent.toLowerCase() ;
+        var regStr_ie = /msie [\d.]+;/gi ;
+        var regStr_ff = /firefox\/[\d.]+/gi
+        var regStr_chrome = /chrome\/[\d.]+/gi ;
+        var regStr_saf = /safari\/[\d.]+/gi ;
+        //IE
+        if(agent.indexOf("msie") > 0)       {return agent.match(regStr_ie) ;     }
+        //firefox
+        if(agent.indexOf("firefox") > 0)    {return agent.match(regStr_ff) ;     }
+        //Chrome
+        if(agent.indexOf("chrome") > 0)     {return agent.match(regStr_chrome) ; }
+        //Safari
+        if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0)    { return agent.match(regStr_saf) ;    }
     }
     </script>
  -->
-
-
-
 
 
 </body>
