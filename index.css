@@ -38,11 +38,11 @@ a{    text-decoration : none;}
 /* 总框 */
 .banner{
     position: relative;
-    width: 90%;
-    height: 390px;
+    width: 64%;
+    height: 320px;
     margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 10px;
+    margin-left: 150px; 
+    /* margin-right: 50px; */
 
 }
 /* 三张图的总ul */
@@ -118,6 +118,15 @@ a{    text-decoration : none;}
 .point.active{                         /* 激活点颜色 */
     background-color: skyblue;
 }
+
+
+/*************** muon视频的位置控制 **************/
+#video-muon{
+    position: relative;
+    top: -20px;
+    left: 140px;
+}
+
 
 /*************** 左下about框 **************/
 #about{
@@ -199,11 +208,11 @@ h6{
 #AmIContent{
     width: 92%;
     margin-left: 4%;
-    margin-top: 60px;
+    margin-top: 60px;    /*名言警句上面蓝色分割线高度*/
     padding-top: 60px;
     border-top: 2px solid skyblue;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:16pt ;
+    font-size:14pt ;
     /* letter-spacing: ;          漢字间距*/
     text-indent: 2em;             /* 首行缩进 */
     line-height: 26pt;
@@ -223,8 +232,8 @@ h6{
 /*************** 最底部框 **************/
 #bottom{
     border-top : 2px solid #c0c0c0;
-    width: 96%;
-    margin-left: 2%;
+    width: 92%;
+    margin-left: 4%;
     margin-top: 60px;
     height: 300px;
     color: #666666;
