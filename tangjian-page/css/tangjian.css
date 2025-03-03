@@ -114,3 +114,20 @@ a{
     margin: 25px auto 50px ;
 }
 
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 左对齐 */
+    gap: 5px; /* 图片之间的间距 */
+    padding: 10px;
+}
+
+#gallery img {
+    height: 150px; /* 统一高度 */
+    width: auto; /* 宽度根据比例自适应 */
+    object-fit: contain; /* 确保图片完整显示，不被裁剪 */
+}
+img {
+    display: block;
+}

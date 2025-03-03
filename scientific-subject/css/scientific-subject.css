@@ -72,3 +72,63 @@
     padding-top: 5em;
 
 }
+/****************** 天河二号 ****************/
+#achive-4{
+    margin-top: 60px;
+    height: 28em;
+}
+#achive-4-pic{
+    float: right;
+    width:40%;
+    padding-top: 20px;
+
+}
+#achive-4-text{
+    float: right;
+    width: 50%;
+    padding-top: 5em;
+    color: #666666;
+    font-size: 20pt;
+    text-align: center;
+    /* border:5px solid red; */
+}
+/****************** MACE ****************/
+#achive-5{
+    margin-top: 60px;
+    height: 28em;
+}
+#achive-5-pic{
+    float: left;
+    width:40%;
+    padding-top: 20px;
+
+}
+#achive-5-text{
+    float: left;
+    width: 50%;
+    padding-top: 5em;
+    color: #666666;
+    font-size: 20pt;
+    text-align: center;
+    /* border:5px solid red; */
+}
+/****************** 宇生缪子探测器 ****************/
+#achive-6{
+    margin-top: 60px;
+    height: 28em;
+}
+#achive-6-pic{
+    float: right;
+    width:40%;
+    padding-top: 20px;
+
+}
+#achive-6-text{
+    float: right;
+    width: 50%;
+    padding-top: 5em;
+    color: #666666;
+    font-size: 20pt;
+    text-align: center;
+    /* border:5px solid red; */
+}
