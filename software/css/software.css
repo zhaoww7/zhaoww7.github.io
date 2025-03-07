@@ -25,11 +25,13 @@ a:active {
     color: teal;
     font-size: 24pt;
     font-family: SimHei;
+    display: block;
 }
 
 /******************* 计算平台 *******************/
 #computer{
     height: 300px;
+    /* display: inline-block; */
 }
 #BESIII{
     margin-left: 15%;
@@ -52,7 +54,8 @@ a:active {
 
 /************** 操作系统 *****************/
 #os{
-    height: 300px;
+    height: 430px;
+    /* display: inline-block; */
 }
 #vmware{
     margin-left: 10%;
@@ -79,8 +82,8 @@ a:active {
 
 /**************** 物理软件 ***************/
 #software{
-  
-    height: 430px;              /* margin-bottom: 20px ;*/
+    display: inline-block;
+    height: 500px;              /* margin-bottom: 20px ;*/
 }
 #root{
     margin-left: 10%;
@@ -138,8 +141,8 @@ a:active {
 
 /**************** 实用软件 ***************/
 #others{
-  
     height: 400px;              /* margin-bottom: 20px ;*/
+    /* display: inline-block; */
 }
 #LaTeX{
     margin-left: 10%;

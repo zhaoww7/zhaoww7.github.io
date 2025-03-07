@@ -1,7 +1,7 @@
 // 假设图片文件夹路径为 'images/'
 const imageFolder = '../picture/award/';
 const imagesPerRow = 9; // 每行显示的图片数量
-const totalImages = 18; // 总图片数量
+const totalImages = 19; // 总图片数量
 
 const gallery = document.getElementById('gallery');
 

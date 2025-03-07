@@ -11,6 +11,14 @@
     font-family: SimHei;
 }
 
+.full-width {
+    width: 100%; /* 确保宽度为100% */
+    display: block; /* 确保是块级元素 */
+    margin: 0; /* 重置margin */
+    padding: 0; /* 重置padding */
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
+}
+
 /****************** 加速器中微子实验成绩 ****************/
 #achive-1{
     margin-top: 60px;
@@ -35,6 +43,8 @@
 /****************** 低本底探测器技术成绩 ****************/
 #achive-2{
     height: 30em;
+    display: inline-block;
+
 }
 #achive-2-pic{
     float: left;
@@ -42,7 +52,7 @@
     margin-left: 5%;
 }
 #achive-2-text{
-    float: left;
+    float: right;
     width: 36%;
     margin-left: 10%;
     padding-top: 5em;
@@ -75,27 +85,30 @@
 /****************** 天河二号 ****************/
 #achive-4{
     margin-top: 60px;
-    height: 28em;
+    height: 45em;
+    display: inline-block;
 }
 #achive-4-pic{
     float: right;
     width:40%;
-    padding-top: 20px;
 
 }
 #achive-4-text{
     float: right;
-    width: 50%;
-    padding-top: 5em;
+    width: 44%;
+    height: 20em;
     color: #666666;
     font-size: 20pt;
-    text-align: center;
-    /* border:5px solid red; */
+    text-align: left;
+    padding-left: 10%; 
+    padding-top: 5em;
 }
 /****************** MACE ****************/
 #achive-5{
     margin-top: 60px;
-    height: 28em;
+    height: 22em;
+    display: inline-block;
+
 }
 #achive-5-pic{
     float: left;
@@ -105,30 +118,57 @@
 }
 #achive-5-text{
     float: left;
-    width: 50%;
-    padding-top: 5em;
+    width: 44%;
+    height: 20em;
     color: #666666;
     font-size: 20pt;
-    text-align: center;
-    /* border:5px solid red; */
+    text-align: left;
+    padding-left: 10%; 
+    padding-top: 5em;
 }
 /****************** 宇生缪子探测器 ****************/
 #achive-6{
     margin-top: 60px;
-    height: 28em;
+    height: 43em;
+    display: inline-block;
+
 }
 #achive-6-pic{
     float: right;
     width:40%;
-    padding-top: 20px;
-
 }
 #achive-6-text{
     float: right;
-    width: 50%;
-    padding-top: 5em;
+    width: 44%;
+    height: 20em;
     color: #666666;
     font-size: 20pt;
-    text-align: center;
-    /* border:5px solid red; */
+    text-align: left;
+    padding-left: 10%; 
+    padding-top: 5em;
 }
+
+.grid-container {
+    display: grid; /* 使用Grid布局 */
+    grid-template-rows: auto auto; /* 定义两行 */
+    float:left;
+    margin-left: 5%;
+
+  }
+  .grid-container img {
+    grid-row: 1; /* 图片放在第一行 */
+  }
+  .grid-container video {
+    grid-row: 2; /* 文字放在第二行 */
+    left:50%;
+    top:50%;
+    margin: 0 auto;
+    /* float: left;
+    width: 44%;
+    height: 20em;
+    color: #666666;
+    font-size: 20pt;
+    text-align: left;
+    padding-left: 10%; 
+    padding-top: 5em; */
+  }
